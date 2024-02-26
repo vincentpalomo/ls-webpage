@@ -12,6 +12,8 @@ export default function Home() {
       <p>hello from main page</p>
 
       <div>modern web design</div>
+
+      <section>🚀 Lorem ipsum dolor sit amet.</section>
     </main>
   );
 }
