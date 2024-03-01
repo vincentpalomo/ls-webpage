@@ -11,7 +11,7 @@ export default function Home() {
           <li className="hover:text-purple-400 cursor-pointer">contact</li>
         </ul>
       </nav>
-      <div className="h-[675px] w-[90%] overflow-hidden">
+      <div className="h-[675px] w-[90%] overflow-hidden opacity-25">
         <svg xmlns="http://www.w3.org/2000/svg" width="2000" height="2000" viewBox="0 0 600 600">
           <path
             fill="#F1F1F1"
@@ -22,12 +22,6 @@ export default function Home() {
       <div className="flex w-full justify-around items-center overflow-hidden absolute bottom-5">
         <p className="text-[180px] uppercase tracking-[.20em] leading-[180px] font-montserrat">lucid studio</p>
       </div>
-
-      {/* <p>hello from main page</p>
-
-      <div>modern web design</div>
-
-      <section>🚀 Lorem ipsum dolor sit amet.</section> */}
     </main>
   );
 }
