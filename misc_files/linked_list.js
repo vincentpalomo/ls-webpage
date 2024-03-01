@@ -27,3 +27,19 @@ class LinkedList {
     return this;
   }
 }
+
+function detectLoop(head) {
+  let seen = new Set();
+
+  while (head != null) {
+    if (seen.has(head)) {
+      return true;
+    }
+
+    seen.add(head);
+
+    head = head.next;
+  }
+
+  return false;
+}
