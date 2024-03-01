@@ -6,6 +6,7 @@ export default function Home() {
     <>
       <main className="flex min-h-screen flex-col items-center bg-off-black text-off-white relative">
         <div className="bg-noise w-full h-screen fixed opacity-[.02] pointer-events-none"></div>
+
         <nav className="flex justify-between items-center px-24 w-full h-[70px] uppercase font-switzer text-xl">
           <h1 className="cursor-pointer">lucid studio ✌</h1>
 
@@ -24,6 +25,7 @@ export default function Home() {
             </li>
           </ul>
         </nav>
+
         <div className="h-[550px] w-[90%] flex items-center overflow-hidden opacity-25">
           <svg xmlns="http://www.w3.org/2000/svg" width="2000" height="2000" viewBox="0 0 600 600">
             <path
@@ -32,11 +34,12 @@ export default function Home() {
             ></path>
           </svg>
         </div>
-        <div className="flex justify-center w-full overflow-hidden absolute bottom-36">
+
+        <div className="flex justify-center w-full overflow-hidden mt-5">
           <p className="text-[11.25rem] uppercase tracking-[.20em] leading-[180px] font-montserrat">lucid studio</p>
         </div>
 
-        <div className="ml-[86px] mt-52">
+        <div className="w-[90%] flex items-center mt-5">
           <p className="w-[43%] text-off-grey tracking-wider leading-[1.28em] font-switzer">
             Our studio specializes in creating visually stunning websites that embody the essence of modern design. With
             a focus on sleek aesthetics and cutting-edge design, we bring your vision to life in the digital realm. Our
