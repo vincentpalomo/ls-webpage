@@ -16,6 +16,9 @@ const config: Config = {
       fontFamily: {
        montserrat: ["montserrat", 'sans-serif'],
        switzer: ['switzer', 'sans-serif'],
+      },
+      backgroundImage: {
+        'noise': 'url("./assets/noise.gif")'
       }
     },
   },

@@ -1,6 +1,7 @@
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center bg-off-black text-off-white relative">
+      <div className="bg-noise w-full h-screen fixed opacity-[.02] pointer-events-none"></div>
       <nav className="flex justify-between items-center px-24 w-full h-[70px] uppercase font-switzer text-xl">
         <h1 className="cursor-pointer">lucid studio</h1>
 
@@ -11,7 +12,7 @@ export default function Home() {
           <li className="hover:text-purple-400 cursor-pointer">contact</li>
         </ul>
       </nav>
-      <div className="h-[675px] w-[90%] overflow-hidden opacity-25">
+      <div className="h-[675px] w-[90%] flex items-center overflow-hidden opacity-25">
         <svg xmlns="http://www.w3.org/2000/svg" width="2000" height="2000" viewBox="0 0 600 600">
           <path
             fill="#F1F1F1"
@@ -19,8 +20,8 @@ export default function Home() {
           ></path>
         </svg>
       </div>
-      <div className="flex w-full justify-around items-center overflow-hidden absolute bottom-5">
-        <p className="text-[180px] uppercase tracking-[.20em] leading-[180px] font-montserrat">lucid studio</p>
+      <div className="flex justify-center w-full overflow-hidden absolute bottom-5">
+        <p className="text-[11.25rem] uppercase tracking-[.20em] leading-[180px] font-montserrat ml-5">lucid studio</p>
       </div>
     </main>
   );
