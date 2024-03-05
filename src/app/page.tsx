@@ -26,7 +26,7 @@ export default function Home() {
           </ul>
         </nav>
 
-        <div className="h-[550px] w-[90%] flex justify-center items-center overflow-hidden opacity-25">
+        <div className="h-[30rem] w-[90%] flex justify-center items-center overflow-hidden opacity-25 border">
           <svg xmlns="http://www.w3.org/2000/svg" width="2000" height="2000" viewBox="0 0 600 600">
             <path
               fill="#F1F1F1"
@@ -37,6 +37,7 @@ export default function Home() {
 
         <div className="flex justify-center w-full overflow-hidden mt-5">
           <p className="text-[11.25rem] uppercase tracking-[.20em] leading-[180px] font-montserrat">lucid studio</p>
+          {/* <p className="text-[11.25rem] uppercase tracking-[.02em] leading-[180px] font-montserrat">vincent palomo</p> */}
         </div>
 
         <div className="w-[90%] flex items-center mt-5">
