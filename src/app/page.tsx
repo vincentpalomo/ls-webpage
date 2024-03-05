@@ -26,7 +26,7 @@ export default function Home() {
           </ul>
         </nav>
 
-        <div className="h-[550px] w-[90%] flex items-center overflow-hidden opacity-25">
+        <div className="h-[550px] w-[90%] flex justify-center items-center overflow-hidden opacity-25">
           <svg xmlns="http://www.w3.org/2000/svg" width="2000" height="2000" viewBox="0 0 600 600">
             <path
               fill="#F1F1F1"
