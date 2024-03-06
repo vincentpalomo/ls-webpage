@@ -9,29 +9,29 @@ const Work = () => {
         <div className="text-title leading-title mx-20 uppercase tracking-title mt-10">Our Work</div>
       </div>
 
-      <div className="flex flex-col w-[90%] text-website leading-website tracking-website uppercase gap-5 mt-20">
-        <div className="border-t-2 flex justify-between items-center">
+      <div className="flex flex-col w-[90%] text-website leading-website tracking-website uppercase mt-20">
+        <div className="border-t-2 border-b flex justify-between items-center">
           website 1
           <span>
             <Image src={arrow} alt="arrow" />
           </span>
         </div>
 
-        <div className="border-t-2 flex justify-between items-center">
+        <div className="border-t border-b flex justify-between items-center">
           website 2
           <span>
             <Image src={arrow} alt="arrow" />
           </span>
         </div>
 
-        <div className="border-t-2 flex justify-between items-center">
+        <div className="border-t border-b flex justify-between items-center">
           website 3
           <span>
             <Image src={arrow} alt="arrow" />
           </span>
         </div>
 
-        <div className="border-t-2 border-b-2 flex justify-between items-center">
+        <div className="border-t border-b-2 flex justify-between items-center">
           website 4
           <span>
             <Image src={arrow} alt="arrow" />
