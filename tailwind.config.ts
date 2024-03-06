@@ -18,7 +18,8 @@ const config: Config = {
        switzer: ['switzer', 'sans-serif'],
       },
       backgroundImage: {
-        'noise': 'url("./assets/noise.gif")'
+        'noise': 'url("./assets/noise.gif")',
+        'hero-pattern': 'url("./svg/topography.svg")'
       }
     },
   },
