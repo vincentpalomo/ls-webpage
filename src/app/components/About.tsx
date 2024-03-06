@@ -3,9 +3,9 @@ import React from 'react';
 const About = () => {
   return (
     <div className="flex flex-col justify-between min-h-screen text-off-white bg-off-black overflow-hidden">
-      <div className="relative w-full">
-        <div className="font-montserrat uppercase text-[11.25rem] leading-[180px] ml-20">what we</div>
-        <div className="font-montserrat uppercase text-[11.25rem] leading-[180px] absolute left-[450px] top-36">
+      <div className="relative w-full mt-10">
+        <div className="font-montserrat uppercase text-[11.25rem] leading-[180px] tracking-title ml-20">what we</div>
+        <div className="font-montserrat uppercase text-[11.25rem] leading-[180px] absolute left-[550px] top-36 tracking-title">
           offer
         </div>
       </div>

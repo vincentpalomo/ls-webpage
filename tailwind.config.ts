@@ -17,6 +17,18 @@ const config: Config = {
        montserrat: ["montserrat", 'sans-serif'],
        switzer: ['switzer', 'sans-serif'],
       },
+      fontSize: {
+        'title': '11.25rem',
+        'website': '8rem'
+      },
+      lineHeight: {
+        'title': '12.25rem',
+        'website': '8rem'
+      },
+      letterSpacing: {
+        'title': '.20em',
+        'website': '.14em'
+      },
       backgroundImage: {
         'noise': 'url("./assets/noise.gif")',
         'hero-pattern': 'url("./svg/topography.svg")'
