@@ -10,28 +10,28 @@ const Work = () => {
       </div>
 
       <div className="flex flex-col w-[90%] text-website leading-website tracking-website uppercase mt-20">
-        <div className="border-t-2 border-b flex justify-between items-center">
+        <div className="border-t-2 border-b flex justify-between items-center cursor-pointer">
           website 1
           <span>
             <Image src={arrow} alt="arrow" />
           </span>
         </div>
 
-        <div className="border-t border-b flex justify-between items-center">
+        <div className="border-t border-b flex justify-between items-center cursor-pointer">
           website 2
           <span>
             <Image src={arrow} alt="arrow" />
           </span>
         </div>
 
-        <div className="border-t border-b flex justify-between items-center">
+        <div className="border-t border-b flex justify-between items-center cursor-pointer">
           website 3
           <span>
             <Image src={arrow} alt="arrow" />
           </span>
         </div>
 
-        <div className="border-t border-b-2 flex justify-between items-center">
+        <div className="border-t border-b-2 flex justify-between items-center cursor-pointer">
           website 4
           <span>
             <Image src={arrow} alt="arrow" />
