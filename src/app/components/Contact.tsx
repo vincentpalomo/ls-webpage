@@ -1,6 +1,12 @@
+'use client';
+
 import React from 'react';
 
 const Contact = () => {
+  const handleClick = () => {
+    return console.log('hello');
+  };
+
   return (
     <div className="min-h-screen bg-off-black text-off-white font-montserrat flex flex-col justify-between">
       <div className="relative w-full mt-10">
@@ -30,7 +36,10 @@ const Contact = () => {
         </div>
 
         <div className="mb-10 mt-5">
-          <button className="bg-off-white text-off-black w-[200px] h-[50px] rounded-[20px] hover:bg-purple-400">
+          <button
+            className="bg-off-white text-off-black w-[200px] h-[50px] rounded-[20px] hover:bg-purple-400"
+            onClick={handleClick}
+          >
             send
           </button>
         </div>
