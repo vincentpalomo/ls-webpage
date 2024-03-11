@@ -8,8 +8,11 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen bg-off-black text-off-white font-montserrat flex flex-col justify-between">
-      <div className="relative w-full mt-10">
+    <div
+      className="min-h-screen bg-off-black text-off-white font-montserrat flex flex-col justify-between"
+      id="contact"
+    >
+      <div className="relative w-full mt-10 pointer-events-none">
         <div className="font-montserrat uppercase text-[11.25rem] leading-[180px] tracking-title ml-20">work</div>
         <div className="font-montserrat uppercase text-[11.25rem] leading-[180px] absolute left-[320px] top-36 tracking-title">
           with us

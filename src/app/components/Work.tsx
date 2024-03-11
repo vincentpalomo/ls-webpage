@@ -4,7 +4,7 @@ import arrow from '../assets/arrow.svg';
 
 const Work = () => {
   return (
-    <div className="min-h-screen bg-off-black text-off-white font-montserrat flex flex-col items-center">
+    <div className="min-h-screen bg-off-black text-off-white font-montserrat flex flex-col items-center" id="work">
       <div className="w-full text-right">
         <div className="text-title leading-title mx-20 uppercase tracking-title mt-10">Our Work</div>
       </div>

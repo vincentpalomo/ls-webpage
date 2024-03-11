@@ -1,31 +1,56 @@
-import React from 'react';
+'use client';
+
+import React, { useEffect, useRef } from 'react';
 import Link from 'next/link';
 
+import { gsap } from 'gsap';
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
+
+gsap.registerPlugin(ScrollToPlugin);
+
 const Main = () => {
+  const scrollToHome = () => {
+    gsap.to(window, { duration: 1.5, scrollTo: { y: '#home' }, ease: 'power2.inOut' });
+  };
+
+  const scrollToAbout = () => {
+    gsap.to(window, { duration: 1.5, scrollTo: { y: '#about' }, ease: 'power2.inOut' });
+  };
+
+  const scrollToWork = () => {
+    gsap.to(window, { duration: 1.5, scrollTo: { y: '#work' }, ease: 'power2.inOut' });
+  };
+
+  const scrollToContact = () => {
+    gsap.to(window, { duration: 1.5, scrollTo: { y: '#contact' }, ease: 'power2.inOut' });
+  };
+
   return (
-    <main className="flex min-h-screen flex-col items-center bg-off-black text-off-white relative">
+    <main className="flex min-h-screen flex-col items-center bg-off-black text-off-white relative" id="home">
       <div className="bg-noise w-full h-screen fixed opacity-[.02] pointer-events-none"></div>
 
-      <nav className="flex justify-between items-center px-24 w-full h-[70px] uppercase font-switzer text-xl tracking-wide">
-        <h1 className="cursor-pointer">lucid studio ✌</h1>
+      <nav className="fixed flex justify-between items-center px-24 w-full h-[70px] uppercase font-switzer text-xl tracking-wide">
+        <h1 className="cursor-pointer" onClick={scrollToHome}>
+          lucid studio ✌
+        </h1>
 
         <ul className="flex justify-around space-x-5 w-fit">
-          <li className="hover:text-purple-400 cursor-pointer">
+          <li className="hover:text-purple-400 cursor-pointer" onClick={scrollToHome}>
             <Link href="/">home</Link>
           </li>
-          <li className="hover:text-purple-400 cursor-pointer">
+          <li className="hover:text-purple-400 cursor-pointer" onClick={scrollToAbout}>
             <Link href="/">about</Link>
           </li>
-          <li className="hover:text-purple-400 cursor-pointer">
+          <li className="hover:text-purple-400 cursor-pointer" onClick={scrollToWork}>
             <Link href="/">work</Link>
           </li>
-          <li className="hover:text-purple-400 cursor-pointer">
+          <li className="hover:text-purple-400 cursor-pointer" onClick={scrollToContact}>
             <Link href="/">contact</Link>
           </li>
         </ul>
       </nav>
 
-      <div className="h-[500px] w-[90%] flex items-center overflow-hidden opacity-25 bg-hero-pattern"></div>
+      <div className="h-[500px] w-[90%] flex items-center overflow-hidden opacity-25 bg-hero-pattern mt-[70px]"></div>
 
       <div className="flex justify-center overflow-hidden mt-5 ml-1">
         <p className="text-[11.25rem] uppercase tracking-[.20em] leading-[180px] font-montserrat">lucid studio</p>
