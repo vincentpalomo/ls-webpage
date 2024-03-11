@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 
 import { gsap } from 'gsap';
@@ -9,19 +9,25 @@ import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 gsap.registerPlugin(ScrollToPlugin);
 
 const Main = () => {
+  const [active, setActive] = useState(0);
+
   const scrollToHome = () => {
+    setActive(1);
     gsap.to(window, { duration: 1.5, scrollTo: { y: '#home' }, ease: 'power2.inOut' });
   };
 
   const scrollToAbout = () => {
+    setActive(2);
     gsap.to(window, { duration: 1.5, scrollTo: { y: '#about' }, ease: 'power2.inOut' });
   };
 
   const scrollToWork = () => {
+    setActive(3);
     gsap.to(window, { duration: 1.5, scrollTo: { y: '#work' }, ease: 'power2.inOut' });
   };
 
   const scrollToContact = () => {
+    setActive(4);
     gsap.to(window, { duration: 1.5, scrollTo: { y: '#contact' }, ease: 'power2.inOut' });
   };
 
@@ -35,16 +41,28 @@ const Main = () => {
         </h1>
 
         <ul className="flex justify-around space-x-5 w-fit">
-          <li className="hover:text-purple-400 cursor-pointer" onClick={scrollToHome}>
+          <li
+            className={`hover:text-purple-400 cursor-pointer ${active === 1 ? 'text-purple-400' : 'text-off-white'}`}
+            onClick={scrollToHome}
+          >
             <Link href="/">home</Link>
           </li>
-          <li className="hover:text-purple-400 cursor-pointer" onClick={scrollToAbout}>
+          <li
+            className={`hover:text-purple-400 cursor-pointer ${active === 2 ? 'text-purple-400' : 'text-off-white'}`}
+            onClick={scrollToAbout}
+          >
             <Link href="/">about</Link>
           </li>
-          <li className="hover:text-purple-400 cursor-pointer" onClick={scrollToWork}>
+          <li
+            className={`hover:text-purple-400 cursor-pointer ${active === 3 ? 'text-purple-400' : 'text-off-white'}`}
+            onClick={scrollToWork}
+          >
             <Link href="/">work</Link>
           </li>
-          <li className="hover:text-purple-400 cursor-pointer" onClick={scrollToContact}>
+          <li
+            className={`hover:text-purple-400 cursor-pointer ${active === 4 ? 'text-purple-400' : 'text-off-white'}`}
+            onClick={scrollToContact}
+          >
             <Link href="/">contact</Link>
           </li>
         </ul>

@@ -3,7 +3,7 @@ import React from 'react';
 const About = () => {
   return (
     <div className="flex flex-col justify-between min-h-screen text-off-white bg-off-black overflow-hidden" id="about">
-      <div className="relative w-full mt-10">
+      <div className="relative w-full mt-10 pointer-events-none">
         <div className="font-montserrat uppercase text-[11.25rem] leading-[180px] tracking-title ml-20">what we</div>
         <div className="font-montserrat uppercase text-[11.25rem] leading-[180px] absolute left-[550px] top-36 tracking-title">
           offer
