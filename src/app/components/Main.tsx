@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState } from 'react';
-import Link from 'next/link';
 
 import { gsap } from 'gsap';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
@@ -14,6 +13,10 @@ const Main = () => {
   const scrollToHome = () => {
     setActive(1);
     gsap.to(window, { duration: 1.5, scrollTo: { y: '#home' } });
+
+    setTimeout(() => {
+      setActive(0);
+    }, 2500);
   };
 
   const scrollToAbout = () => {
@@ -42,7 +45,7 @@ const Main = () => {
 
         <ul className="flex justify-around space-x-5 w-fit">
           <li
-            className={`hover:text-purple-400 cursor-pointer ${active === 6 ? 'text-purple-400' : 'text-off-white'}`}
+            className={`hover:text-purple-400 cursor-pointer ${active === 1 ? 'text-purple-400' : 'text-off-white'}`}
             onClick={scrollToHome}
           >
             <button>home</button>
@@ -68,7 +71,7 @@ const Main = () => {
         </ul>
       </nav>
 
-      <div className="h-[500px] w-[90%] flex items-center overflow-hidden opacity-25 bg-hero-pattern mt-[70px]"></div>
+      <div className="h-[500px] w-[90%] flex items-center overflow-hidden opacity-25 bg-hero-pattern mt-[70px] pointer-events-none"></div>
 
       <div className="flex justify-center overflow-hidden mt-5 ml-1">
         <p className="text-[11.25rem] uppercase tracking-[.20em] leading-[180px] font-montserrat">lucid studio</p>
