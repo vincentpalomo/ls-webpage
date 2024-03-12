@@ -42,28 +42,28 @@ const Main = () => {
 
         <ul className="flex justify-around space-x-5 w-fit">
           <li
-            className={`hover:text-purple-400 cursor-pointer ${active === 1 ? 'text-purple-400' : 'text-off-white'}`}
+            className={`hover:text-purple-400 cursor-pointer ${active === 6 ? 'text-purple-400' : 'text-off-white'}`}
             onClick={scrollToHome}
           >
-            <Link href="/">home</Link>
+            <button>home</button>
           </li>
           <li
             className={`hover:text-purple-400 cursor-pointer ${active === 2 ? 'text-purple-400' : 'text-off-white'}`}
             onClick={scrollToAbout}
           >
-            <Link href="/">about</Link>
+            <button>about</button>
           </li>
           <li
             className={`hover:text-purple-400 cursor-pointer ${active === 3 ? 'text-purple-400' : 'text-off-white'}`}
             onClick={scrollToWork}
           >
-            <Link href="/">work</Link>
+            <button>work</button>
           </li>
           <li
             className={`hover:text-purple-400 cursor-pointer ${active === 4 ? 'text-purple-400' : 'text-off-white'}`}
             onClick={scrollToContact}
           >
-            <Link href="/">contact</Link>
+            <button>contact</button>
           </li>
         </ul>
       </nav>
