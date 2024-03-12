@@ -13,22 +13,22 @@ const Main = () => {
 
   const scrollToHome = () => {
     setActive(1);
-    gsap.to(window, { duration: 1.5, scrollTo: { y: '#home' }, ease: 'power2.inOut' });
+    gsap.to(window, { duration: 1.5, scrollTo: { y: '#home' } });
   };
 
   const scrollToAbout = () => {
     setActive(2);
-    gsap.to(window, { duration: 1.5, scrollTo: { y: '#about' }, ease: 'power2.inOut' });
+    gsap.to(window, { duration: 1.5, scrollTo: { y: '#about' } });
   };
 
   const scrollToWork = () => {
     setActive(3);
-    gsap.to(window, { duration: 1.5, scrollTo: { y: '#work' }, ease: 'power2.inOut' });
+    gsap.to(window, { duration: 1.5, scrollTo: { y: '#work' } });
   };
 
   const scrollToContact = () => {
     setActive(4);
-    gsap.to(window, { duration: 1.5, scrollTo: { y: '#contact' }, ease: 'power2.inOut' });
+    gsap.to(window, { duration: 1.5, scrollTo: { y: '#contact' } });
   };
 
   return (
@@ -36,7 +36,7 @@ const Main = () => {
       <div className="bg-noise w-full h-screen fixed opacity-[.02] pointer-events-none"></div>
 
       <nav className="fixed flex justify-between items-center px-24 w-full h-[70px] uppercase font-switzer text-xl tracking-wide">
-        <h1 className="cursor-pointer" onClick={scrollToHome}>
+        <h1 className="cursor-pointer hover:text-purple-400" onClick={scrollToHome}>
           lucid studio ✌
         </h1>
 
