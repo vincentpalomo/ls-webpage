@@ -31,6 +31,27 @@ const Contact = () => {
       <div className="ml-20">
         <h1 className="uppercase text-[20px] font-bold">say hello</h1>
 
+        {/* <form>
+          <div className="text-[16px] text-off-grey w-1/3">
+            <div className="border-b py-2">
+              <label htmlFor="name">name: </label>
+              <input type="text" id="name" name="name" required className=" bg-transparent" />
+            </div>
+            <div className="border-b py-2">
+              <label htmlFor="email">email: </label>
+              <input type="email" id="email" name="email" required className=" bg-transparent" />
+            </div>
+            <div className="border-b py-2">
+              <label htmlFor="phone">phone: </label>
+              <input type="tel" id="phone" name="phone" required className=" bg-transparent" />
+            </div>
+            <div className="border-b py-2">
+              <label htmlFor="message">message: </label>
+              <textarea id="message" name="message" rows={1} required className=" bg-transparent" />
+            </div>
+          </div>
+        </form> */}
+
         <div className="text-[16px] text-off-grey w-1/3">
           <div className="border-b py-2">name</div>
           <div className="border-b py-2">email</div>
