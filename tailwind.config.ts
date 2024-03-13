@@ -19,11 +19,13 @@ const config: Config = {
       },
       fontSize: {
         'title': '11.25rem',
-        'website': '8rem'
+        'website': '8rem',
+        'mac': '8.5rem'
       },
       lineHeight: {
         'title': '12.25rem',
-        'website': '8rem'
+        'website': '8rem',
+        'mac': '8.5rem'
       },
       letterSpacing: {
         'title': '.20em',
