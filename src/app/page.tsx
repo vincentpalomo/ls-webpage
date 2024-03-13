@@ -6,10 +6,12 @@ import Contact from './components/Contact';
 export default function Home() {
   return (
     <>
-      <Main />
-      <About />
-      <Work />
-      <Contact />
+      <div className="overflow-hidden">
+        <Main />
+        <About />
+        <Work />
+        <Contact />
+      </div>
     </>
   );
 }
