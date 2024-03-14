@@ -3,6 +3,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ### LUCID STUDIO
 
 -> website for web agency
+-> mobile needs update
 
 ## Getting Started
 
