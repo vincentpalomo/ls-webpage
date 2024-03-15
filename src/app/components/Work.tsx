@@ -12,7 +12,7 @@ const Work = () => {
       </div>
 
       <div className="flex flex-col w-[90%] text-website leading-website tracking-website uppercase 2xl:mt-20 xl:mt-10">
-        <div className="border-t-2 border-b flex justify-between items-center cursor-pointer hover:bg-purple-400 hover:bg-blend-luminosity">
+        <div className="border-t-2 border-b flex justify-between items-center cursor-pointer hover:bg-purple-400">
           website 1
           <span>
             <Image src={arrow} alt="arrow" />
