@@ -38,7 +38,7 @@ const Main = () => {
     <main className="flex min-h-screen flex-col items-center bg-off-black text-off-white relative" id="home">
       <div className="bg-noise w-full h-screen fixed opacity-[.02] pointer-events-none"></div>
 
-      <nav className="fixed flex xl:justify-between items-center 2xl:px-24 xl:px-20 w-full h-[70px] uppercase font-switzer text-xl tracking-wide">
+      <nav className="fixed flex xl:justify-between items-center 2xl:px-24 xl:px-20 sm:w-full w-[95vw] h-[70px] uppercase font-switzer text-xl tracking-wide">
         <h1 className="cursor-pointer hover:text-purple-400" onClick={scrollToHome}>
           lucid studio ✌
         </h1>
