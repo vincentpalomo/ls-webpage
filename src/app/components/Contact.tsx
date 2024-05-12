@@ -33,33 +33,40 @@ const Contact = () => {
       <div className="sm:ml-20 ml-5">
         <h1 className="uppercase text-[20px] font-bold">say hello</h1>
 
-        {/* <form>
-          <div className="text-[16px] text-off-grey w-1/3">
+        <form>
+          <div className="text-[16px] text-off-grey sm:w-1/3 w-[90vw]">
             <div className="border-b py-2">
-              <label htmlFor="name">name: </label>
-              <input type="text" id="name" name="name" required className=" bg-transparent" />
+              {/* <label htmlFor="name">name: </label> */}
+              <input type="text" id="name" name="name" placeholder="name" required className=" bg-transparent" />
             </div>
             <div className="border-b py-2">
-              <label htmlFor="email">email: </label>
-              <input type="email" id="email" name="email" required className=" bg-transparent" />
+              {/* <label htmlFor="email">email: </label> */}
+              <input type="email" id="email" name="email" placeholder="email" required className=" bg-transparent" />
             </div>
             <div className="border-b py-2">
-              <label htmlFor="phone">phone: </label>
-              <input type="tel" id="phone" name="phone" required className=" bg-transparent" />
+              {/* <label htmlFor="phone">phone: </label> */}
+              <input type="tel" id="phone" name="phone" placeholder="phone" required className=" bg-transparent" />
             </div>
             <div className="border-b py-2">
-              <label htmlFor="message">message: </label>
-              <textarea id="message" name="message" rows={1} required className=" bg-transparent" />
+              {/* <label htmlFor="message">message: </label> */}
+              <textarea
+                id="message"
+                name="message"
+                rows={1}
+                placeholder="message"
+                required
+                className=" bg-transparent"
+              />
             </div>
           </div>
-        </form> */}
-
+        </form>
+        {/* 
         <div className="text-[16px] text-off-grey sm:w-1/3 w-[95%]">
           <div className="border-b py-2">name</div>
           <div className="border-b py-2">email</div>
           <div className="border-b py-2">phone</div>
           <div className="border-b py-2">message</div>
-        </div>
+        </div> */}
 
         <div className="mb-10 mt-5">
           <button
