@@ -49,7 +49,7 @@ export default function ContactForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="mx-auto mt-8 w-full sm:w-[400px] lowercase 2xl:w-[600px]">
+    <form onSubmit={handleSubmit} className="mb-8 w-full sm:w-[400px] lowercase 2xl:w-[600px] mx-0 pr-5 sm:pr-0">
       <div className="mb-4 sm:mb-1">
         <label htmlFor="name" className="block mb-1 font-medium">
           Name
@@ -61,7 +61,7 @@ export default function ContactForm() {
           value={formData.name}
           onChange={handleChange}
           required
-          className="w-full px-3 py-2 border-2 border-black rounded-xl"
+          className="w-full px-3 py-2 border-2 border-off-white rounded-xl bg-transparent"
         />
       </div>
       <div className="mb-4 sm:mb-1">
@@ -75,7 +75,7 @@ export default function ContactForm() {
           value={formData.email}
           onChange={handleChange}
           required
-          className="w-full px-3 py-2 border-2 border-black rounded-xl"
+          className="w-full px-3 py-2 border-2 border-off-white rounded-xl bg-transparent"
         />
       </div>
       <div className="mb-4 sm:mb-1">
@@ -89,7 +89,7 @@ export default function ContactForm() {
           value={formData.phone}
           onChange={handleChange}
           required
-          className="w-full px-3 py-2 border-2 border-black rounded-xl"
+          className="w-full px-3 py-2 border-2 border-off-white rounded-xl bg-transparent"
         />
       </div>
       <div className="mb-4 sm:mb-1">
@@ -102,15 +102,15 @@ export default function ContactForm() {
           value={formData.message}
           onChange={handleChange}
           required
-          className="w-full px-3 py-2 border-2 border-black rounded-xl"
+          className="w-full px-3 py-2 border-2 border-off-white rounded-xl bg-transparent"
           rows={4}
         ></textarea>
       </div>
       <button
         type="submit"
-        className="w-full sm:w-[100px] px-4 py-2 font-semibold text-white uppercase bg-greenpl rounded-xl hover:bg-green-800 sm:mt-2"
+        className="bg-off-white text-off-black w-[200px] h-[50px] rounded-[20px] hover:bg-purple-400"
       >
-        Submit
+        send
       </button>
     </form>
   );
