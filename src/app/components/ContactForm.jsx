@@ -44,7 +44,7 @@ export default function ContactForm() {
     }
 
     if (submitted) {
-      return <div>Thank you for your message! We will get back to you soon.</div>;
+      return <div className="bg-purple-400">Thank you for your message! We will get back to you soon.</div>;
     }
   };
 
@@ -61,7 +61,7 @@ export default function ContactForm() {
           value={formData.name}
           onChange={handleChange}
           required
-          className="w-full px-3 py-2 border-b-2 border-off-white bg-transparent"
+          className="w-full px-3 py-1 border-b-2 border-off-white bg-transparent"
         />
       </div>
       <div className="mb-4 sm:mb-1">
@@ -75,7 +75,7 @@ export default function ContactForm() {
           value={formData.email}
           onChange={handleChange}
           required
-          className="w-full px-3 py-2 border-b-2 border-off-white bg-transparent"
+          className="w-full px-3 py-1 border-b-2 border-off-white bg-transparent"
         />
       </div>
       <div className="mb-4 sm:mb-1">
@@ -89,7 +89,7 @@ export default function ContactForm() {
           value={formData.phone}
           onChange={handleChange}
           required
-          className="w-full px-3 py-2 border-b-2 border-off-white bg-transparent"
+          className="w-full px-3 py-1 border-b-2 border-off-white bg-transparent"
         />
       </div>
       <div className="mb-4 sm:mb-1">
@@ -102,13 +102,13 @@ export default function ContactForm() {
           value={formData.message}
           onChange={handleChange}
           required
-          className="w-full px-3 py-2 border-b-2 border-off-white bg-transparent"
+          className="w-full px-3 py-1 border-b-2 border-off-white bg-transparent"
           rows={2}
         ></textarea>
       </div>
       <button
         type="submit"
-        className="bg-off-white text-off-black w-[200px] h-[50px] rounded-[20px] hover:bg-purple-400"
+        className="bg-off-white text-off-black w-[200px] h-[50px] rounded-[20px] hover:bg-purple-400 mt-2"
       >
         send
       </button>
