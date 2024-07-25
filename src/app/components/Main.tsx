@@ -2,13 +2,19 @@
 
 import React, { useState } from 'react';
 
-import { gsap } from 'gsap';
+import { gsap, selector } from 'gsap';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 
 gsap.registerPlugin(ScrollToPlugin);
 
 const Main = () => {
   const [active, setActive] = useState(0);
+
+  const scrollTo = (selector: any, active: any) => {
+    setActive(active);
+
+    gsap.to(window, { duration: 1.5, scrollTo: { y: selector } });
+  };
 
   const scrollToHome = () => {
     setActive(1);
