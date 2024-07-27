@@ -14,30 +14,12 @@ const Main = () => {
     setActive(active);
 
     gsap.to(window, { duration: 1.5, scrollTo: { y: selector } });
-  };
 
-  const scrollToHome = () => {
-    setActive(1);
-    gsap.to(window, { duration: 1.5, scrollTo: { y: '#home' } });
-
-    setTimeout(() => {
-      setActive(0);
-    }, 2500);
-  };
-
-  const scrollToAbout = () => {
-    setActive(2);
-    gsap.to(window, { duration: 1.5, scrollTo: { y: '#about' } });
-  };
-
-  const scrollToWork = () => {
-    setActive(3);
-    gsap.to(window, { duration: 1.5, scrollTo: { y: '#work' } });
-  };
-
-  const scrollToContact = () => {
-    setActive(4);
-    gsap.to(window, { duration: 1.5, scrollTo: { y: '#contact' } });
+    if (active == 1) {
+      setTimeout(() => {
+        setActive(0);
+      }, 2500);
+    }
   };
 
   return (
@@ -45,32 +27,32 @@ const Main = () => {
       <div className="bg-noise w-full h-screen fixed opacity-[.02] pointer-events-none"></div>
 
       <nav className="fixed flex xl:justify-between items-center 2xl:px-24 xl:px-20 sm:w-full w-[95vw] h-[70px] uppercase font-switzer text-xl tracking-wide">
-        <h1 className="cursor-pointer hover:text-purple-400" onClick={scrollToHome}>
+        <h1 className="cursor-pointer hover:text-purple-400" onClick={() => scrollTo('#home', 1)}>
           lucid studio ✌
         </h1>
 
         <ul className="flex justify-around space-x-5 w-fit">
           <li
             className={`hover:text-purple-400 cursor-pointer ${active === 1 ? 'text-purple-400' : 'text-off-white'}`}
-            onClick={scrollToHome}
+            onClick={() => scrollTo('#home', 1)}
           >
             <button>home</button>
           </li>
           <li
             className={`hover:text-purple-400 cursor-pointer ${active === 2 ? 'text-purple-400' : 'text-off-white'}`}
-            onClick={scrollToAbout}
+            onClick={() => scrollTo('#about', 2)}
           >
             <button>about</button>
           </li>
           <li
             className={`hover:text-purple-400 cursor-pointer ${active === 3 ? 'text-purple-400' : 'text-off-white'}`}
-            onClick={scrollToWork}
+            onClick={() => scrollTo('#work', 3)}
           >
             <button>work</button>
           </li>
           <li
             className={`hover:text-purple-400 cursor-pointer ${active === 4 ? 'text-purple-400' : 'text-off-white'}`}
-            onClick={scrollToContact}
+            onClick={() => scrollTo('#contact', 4)}
           >
             <button>contact</button>
           </li>
