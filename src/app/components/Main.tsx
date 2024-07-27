@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 
-import { gsap, selector } from 'gsap';
+import { gsap } from 'gsap';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 
 gsap.registerPlugin(ScrollToPlugin);
@@ -65,7 +65,6 @@ const Main = () => {
         <p className="2xl:text-[11.25rem] xl:text-[8.5rem] text-7xl leading-[3.5rem] xl:leading-[8.5rem] uppercase xl:tracking-[.20em] tracking-[.1em] 2xl:leading-[180px] font-montserrat">
           lucid studio
         </p>
-        {/* <p className="text-[11.25rem] uppercase tracking-[.02em] leading-[180px] font-montserrat">vincent palomo</p> */}
       </div>
 
       <div className="w-[91%] flex items-center mt-5 ">
