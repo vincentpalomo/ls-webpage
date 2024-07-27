@@ -3,7 +3,7 @@ import React from 'react';
 const About = () => {
   return (
     <div className="flex flex-col justify-between min-h-screen text-off-white bg-off-black overflow-hidden" id="about">
-      <div className="sm:relative w-full xl:mt-10 mt-20 pointer-events-none flex flex-col">
+      <div className="sm:relative w-full xl:mt-10 mt-20 sm:mx-5 pointer-events-none flex flex-col">
         <div className="font-montserrat uppercase 2xl:text-title 2xl:leading-[180px] xl:text-mac xl:leading-mac text-7xl xl:tracking-title xl:ml-20 ml-5 tracking-tight">
           what we
         </div>
@@ -12,7 +12,7 @@ const About = () => {
         </div>
       </div>
 
-      <div className="h-1/2 xl:grid xl:grid-cols-3 2xl:gap-20 xl:gap-10 xl:mx-20 2xl:mb-20 xl:mb-10 flex flex-col mx-5 my-5">
+      <div className="h-1/2 xl:grid xl:grid-cols-3 2xl:gap-20 xl:gap-10 xl:mx-20 2xl:mb-20 xl:mb-10 flex flex-col mx-5 my-5 2xl:mx-24">
         <div className="2xl:w-[500px] xl:w-[400px]">
           <h1 className="text-[20px] font-bold uppercase font-montserrat mb-5">Web design & development:</h1>
 

@@ -67,8 +67,8 @@ const Main = () => {
         </p>
       </div>
 
-      <div className="w-[91%] flex items-center mt-5 ">
-        <p className="2xl:w-[65%] text-off-grey tracking-[.02em] 2xl:leading-[1.28em] xl:leading-[1.2em] 2xl:text-[24px] xl:text-[20px] font-montserrat">
+      <div className="w-[91%] flex items-center mt-5">
+        <p className="2xl:w-[65%] text-off-grey tracking-[.02em] 2xl:leading-[1.28em] xl:leading-[1.2em] 2xl:text-[24px] xl:text-[20px] font-montserrat sm:ml-3">
           Our studio specializes in creating visually stunning websites that embody the essence of modern design. With a
           focus on sleek aesthetics and cutting-edge design, we bring your vision to life in the digital realm. Our team
           of digital artisans meticulously curates every pixel to ensure a seamless user experience that captivates and

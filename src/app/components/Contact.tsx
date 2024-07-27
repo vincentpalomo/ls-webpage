@@ -10,10 +10,10 @@ const Contact = () => {
 
   return (
     <div
-      className="min-h-screen bg-off-black text-off-white font-montserrat flex flex-col justify-between"
+      className="min-h-screen bg-off-black text-off-white font-montserrat flex flex-col justify-between pl-5"
       id="contact"
     >
-      <div className="sm:relative w-full sm:mt-10 mb-10 mt-20 ml-5 pointer-events-none">
+      <div className="sm:relative w-full sm:mt-10 mb-10 mt-20 pointer-events-none">
         <div className="font-montserrat uppercase 2xl:text-[11.25rem] 2xl:leading-[180px] text-7xl sm:tracking-title xl:text-mac xl:leading-mac sm:ml-20">
           work
         </div>
