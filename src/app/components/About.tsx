@@ -4,12 +4,15 @@ const About = () => {
   return (
     <div className="flex flex-col justify-between min-h-screen text-off-white bg-off-black overflow-hidden" id="about">
       <div className="sm:relative w-full xl:mt-20 mt-20 sm:mx-5 pointer-events-none flex flex-col">
-        <div className="font-montserrat uppercase 2xl:text-title 2xl:leading-[180px] xl:text-mac xl:leading-mac text-7xl xl:tracking-title tracking-tight font-black text-center">
+        <div className="font-montserrat uppercase 2xl:text-title 2xl:leading-[180px] xl:text-mac xl:leading-mac text-7xl xl:tracking-title tracking-tight sm:font-black text-left sm:ml-10 sm:-mb-5 2xl:ml-20 ml-5">
           what we
         </div>
-        <div className="font-montserrat uppercase 2xl:text-[11.25rem] 2xl:leading-[180px] xl:text-mac xl:leading-mac sm:absolute sm:left-[400px] 2xl:top-36 xl:top-28 text-7xl xl:tracking-title text-center leading-[40px] font-black">
+        <div className="font-montserrat uppercase 2xl:text-title 2xl:leading-[180px] xl:text-mac xl:leading-mac text-7xl xl:tracking-title tracking-tight sm:font-black  text-left sm:ml-10 2xl:ml-20 ml-5">
           offer
         </div>
+        {/* <div className="font-montserrat uppercase 2xl:text-[11.25rem] 2xl:leading-[180px] xl:text-mac xl:leading-mac sm:absolute sm:left-[400px] 2xl:top-36 xl:top-28 text-7xl xl:tracking-title text-left leading-[40px] font-black">
+          offer
+        </div> */}
       </div>
 
       <div className="h-1/2 xl:grid xl:grid-cols-3 2xl:gap-20 xl:gap-10 xl:mx-20 2xl:mb-20 xl:mb-20 flex flex-col mx-5 my-5 2xl:mx-24">
