@@ -5,8 +5,8 @@ import arrow from '../assets/arrow.svg';
 const Work = () => {
   return (
     <div className="min-h-screen bg-off-black text-off-white font-montserrat flex flex-col items-center" id="work">
-      <div className="w-full sm:text-right mt-5 sm:mt-0">
-        <div className="2xl:text-title xl:text-mac 2xl:leading-title xl:leading-mac sm:mx-20 ml-5 uppercase text-7xl sm:tracking-title mt-10">
+      <div className="w-full sm:text-left mt-5 sm:mt-0">
+        <div className="2xl:text-title xl:text-mac 2xl:leading-title xl:leading-mac sm:mx-20 ml-5 uppercase text-7xl sm:tracking-title mt-20 font-black">
           Our Work
         </div>
       </div>

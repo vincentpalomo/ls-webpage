@@ -51,13 +51,14 @@ export default function ContactForm() {
   return (
     <form onSubmit={handleSubmit} className="mb-8 w-full sm:w-[400px] lowercase 2xl:w-[600px] mx-0 pr-5 sm:pr-0">
       <div className="mb-4 sm:mb-1">
-        <label htmlFor="name" className="block mb-1 font-medium">
+        {/* <label htmlFor="name" className="block mb-1 font-medium">
           Name
-        </label>
+        </label> */}
         <input
           type="text"
           id="name"
           name="name"
+          placeholder="name"
           value={formData.name}
           onChange={handleChange}
           required
@@ -65,13 +66,14 @@ export default function ContactForm() {
         />
       </div>
       <div className="mb-4 sm:mb-1">
-        <label htmlFor="email" className="block mb-1 font-medium">
+        {/* <label htmlFor="email" className="block mb-1 font-medium">
           Email
-        </label>
+        </label> */}
         <input
           type="email"
           id="email"
           name="email"
+          placeholder="email"
           value={formData.email}
           onChange={handleChange}
           required
@@ -79,13 +81,14 @@ export default function ContactForm() {
         />
       </div>
       <div className="mb-4 sm:mb-1">
-        <label htmlFor="phone" className="block mb-1 font-medium">
+        {/* <label htmlFor="phone" className="block mb-1 font-medium">
           Phone Number
-        </label>
+        </label> */}
         <input
           type="tel"
           id="phone"
           name="phone"
+          placeholder="phone"
           value={formData.phone}
           onChange={handleChange}
           required
@@ -93,12 +96,13 @@ export default function ContactForm() {
         />
       </div>
       <div className="mb-4 sm:mb-1">
-        <label htmlFor="message" className="block mb-1 font-medium">
+        {/* <label htmlFor="message" className="block mb-1 font-medium">
           Message
-        </label>
+        </label> */}
         <textarea
           id="message"
           name="message"
+          placeholder="message"
           value={formData.message}
           onChange={handleChange}
           required

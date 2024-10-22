@@ -59,16 +59,16 @@ const Main = () => {
         </ul>
       </nav>
 
-      <div className="2xl:h-[500px] xl:h-[400px] h-[350px] w-[90%] flex items-center overflow-hidden opacity-25 bg-hero-pattern mt-[70px] pointer-events-none"></div>
+      <div className="2xl:h-[500px] xl:h-[500px] h-[350px] w-[90%] flex items-center overflow-hidden opacity-25 bg-hero-pattern mt-[70px] pointer-events-none"></div>
 
       <div className="flex justify-center overflow-hidden mt-5 xl:ml-1 ml-3">
-        <p className="2xl:text-[11.25rem] xl:text-[8.5rem] text-7xl leading-[3.5rem] xl:leading-[8.5rem] uppercase xl:tracking-[.20em] tracking-[.1em] 2xl:leading-[180px] font-montserrat">
+        <p className="2xl:text-[11.25rem] xl:text-[8.5rem] text-7xl leading-[3.5rem] xl:leading-[8.5rem] uppercase xl:tracking-[.17em] tracking-[.1em] 2xl:leading-[180px] font-montserrat font-black">
           lucid studio
         </p>
       </div>
 
       <div className="w-[91%] flex items-center mt-5">
-        <p className="2xl:w-[65%] text-off-grey tracking-[.02em] 2xl:leading-[1.28em] xl:leading-[1.2em] 2xl:text-[24px] xl:text-[20px] font-montserrat sm:ml-3">
+        <p className="2xl:w-[65%] text-off-grey tracking-[.06em] 2xl:leading-[1.28em] xl:leading-[1.2em] 2xl:text-[24px] xl:text-[20px] font-montserrat sm:ml-3">
           Our studio specializes in creating visually stunning websites that embody the essence of modern design. With a
           focus on sleek aesthetics and cutting-edge design, we bring your vision to life in the digital realm. Our team
           of digital artisans meticulously curates every pixel to ensure a seamless user experience that captivates and
