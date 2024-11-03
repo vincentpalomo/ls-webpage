@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState } from 'react';
-
 import { gsap } from 'gsap';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 
@@ -10,12 +9,10 @@ gsap.registerPlugin(ScrollToPlugin);
 const Main = () => {
   const [active, setActive] = useState(0);
 
-  const scrollTo = (selector: any, active: any) => {
+  const scrollTo = (selector: string, active: number) => {
     setActive(active);
-
     gsap.to(window, { duration: 1.5, scrollTo: { y: selector } });
-
-    if (active == 1) {
+    if (active === 1) {
       setTimeout(() => {
         setActive(0);
       }, 2500);
@@ -23,47 +20,40 @@ const Main = () => {
   };
 
   return (
-    <main className="flex min-h-screen flex-col items-center  bg-off-black text-off-white relative" id="home">
+    <main className="flex min-h-screen flex-col items-center bg-off-black text-off-white relative" id="home">
       <div className="bg-noise w-full h-screen fixed opacity-[.02] pointer-events-none"></div>
-      {/* navbar */}
-      <nav className="fixed flex items-center justify-between sm:w-[980px] font-switzer uppercase text-[20px] h-[5vw] px-2">
-        <h1 className="cursor-pointer flex-1" onClick={() => scrollTo('#home', 1)}>
+
+      {/* Navbar */}
+      <nav className="fixed top-0 left-0 right-0 flex flex-col sm:flex-row items-center justify-between w-full sm:w-[980px] mx-auto font-switzer uppercase text-lg sm:text-xl p-4 sm:py-5 sm:p-2 z-50">
+        <h1 className="cursor-pointer mb-4 sm:mb-0" onClick={() => scrollTo('#home', 1)}>
           lucid studio ✌
         </h1>
 
-        <ul className="flex justify-around space-x-5 w-fit ">
-          <li
-            className={`hover:text-purple-400 cursor-pointer ${active === 1 ? 'text-purple-400' : 'text-off-white'}`}
-            onClick={() => scrollTo('#home', 1)}
-          >
-            <button className="uppercase">home</button>
-          </li>
-          <li
-            className={`hover:text-purple-400 cursor-pointer ${active === 2 ? 'text-purple-400' : 'text-off-white'}`}
-            onClick={() => scrollTo('#about', 2)}
-          >
-            <button className="uppercase">about</button>
-          </li>
-          <li
-            className={`hover:text-purple-400 cursor-pointer ${active === 3 ? 'text-purple-400' : 'text-off-white'}`}
-            onClick={() => scrollTo('#work', 3)}
-          >
-            <button className="uppercase">work</button>
-          </li>
-          <li
-            className={`hover:text-purple-400 cursor-pointer ${active === 4 ? 'text-purple-400' : 'text-off-white'}`}
-            onClick={() => scrollTo('#contact', 4)}
-          >
-            <button className="uppercase">contact</button>
-          </li>
+        <ul className="flex flex-wrap justify-center sm:justify-end space-x-4 sm:space-x-6">
+          {[
+            { label: 'home', selector: '#home', id: 1 },
+            { label: 'about', selector: '#about', id: 2 },
+            { label: 'work', selector: '#work', id: 3 },
+            { label: 'contact', selector: '#contact', id: 4 },
+          ].map((item) => (
+            <li
+              key={item.id}
+              className={`hover:text-purple-400 cursor-pointer ${
+                active === item.id ? 'text-purple-400' : 'text-off-white'
+              }`}
+              onClick={() => scrollTo(item.selector, item.id)}
+            >
+              <button className="uppercase">{item.label}</button>
+            </li>
+          ))}
         </ul>
       </nav>
 
-      <div className="flex flex-col justify-center items-center overflow-hidden h-screen sm:w-[980px]">
-        <p className="sm:text-[128px] text-7xl leading-[3.5rem] uppercase xl:tracking-[-.01em] tracking-[.1em] sm:leading-[100px] font-montserrat font-black">
+      <div className="flex flex-col justify-center items-center overflow-hidden h-screen w-full sm:w-[980px] px-4 sm:px-0">
+        <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-9xl uppercase tracking-[-.01em] leading-tight sm:leading-none font-montserrat font-black text-center sm:text-left">
           lucid studio
-        </p>
-        <p className="2xl:w-[65%] text-off-grey tracking-[.06em] 2xl:leading-[1.28em] xl:leading-[1.2em] 2xl:text-[24px] xl:text-[20px] font-montserrat text-[12px]">
+        </h2>
+        <p className="w-full sm:w-2/3 text-off-grey tracking-wide leading-relaxed text-sm sm:text-base md:text-lg lg:text-xl font-montserrat text-center">
           embody the essence of modern design
         </p>
       </div>

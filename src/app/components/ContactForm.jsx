@@ -44,8 +44,8 @@ export default function ContactForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="mb-8 w-full sm:w-[400px] lowercase 2xl:w-[600px] mx-0 pr-5 sm:pr-0 ">
-      <div className="mb-4 sm:mb-1">
+    <form onSubmit={handleSubmit} className="mb-8 w-full max-w-[600px] lowercase px-4 sm:px-0">
+      <div className="mb-4">
         <input
           type="text"
           id="name"
@@ -54,10 +54,10 @@ export default function ContactForm() {
           value={formData.name}
           onChange={handleChange}
           required
-          className="w-full px-3 py-1 border-b-2 border-off-white bg-transparent"
+          className="w-full px-3 py-2 border-b-2 border-off-white bg-transparent"
         />
       </div>
-      <div className="mb-4 sm:mb-1">
+      <div className="mb-4">
         <input
           type="email"
           id="email"
@@ -66,10 +66,10 @@ export default function ContactForm() {
           value={formData.email}
           onChange={handleChange}
           required
-          className="w-full px-3 py-1 border-b-2 border-off-white bg-transparent"
+          className="w-full px-3 py-2 border-b-2 border-off-white bg-transparent"
         />
       </div>
-      <div className="mb-4 sm:mb-1">
+      <div className="mb-4">
         <input
           type="tel"
           id="phone"
@@ -78,10 +78,10 @@ export default function ContactForm() {
           value={formData.phone}
           onChange={handleChange}
           required
-          className="w-full px-3 py-1 border-b-2 border-off-white bg-transparent"
+          className="w-full px-3 py-2 border-b-2 border-off-white bg-transparent"
         />
       </div>
-      <div className="mb-4 sm:mb-1">
+      <div className="mb-4">
         <textarea
           id="message"
           name="message"
@@ -89,18 +89,18 @@ export default function ContactForm() {
           value={formData.message}
           onChange={handleChange}
           required
-          className="w-full px-3 py-1 border-b-2 border-off-white bg-transparent"
-          rows={2}
+          className="w-full px-3 py-2 border-b-2 border-off-white bg-transparent"
+          rows={3}
         ></textarea>
       </div>
       {submitted ? (
-        <div className="bg-purple-400 w-[200px] h-[50px] rounded-[20px] flex items-center justify-center text-off-black font-semibold">
+        <div className="bg-purple-400 w-full sm:w-[200px] h-[50px] rounded-[20px] flex items-center justify-center text-off-black font-semibold">
           Thank you! 🙂
         </div>
       ) : (
         <button
           type="submit"
-          className="bg-off-white text-off-black w-[200px] h-[50px] rounded-[20px] hover:bg-purple-400 mt-2"
+          className="bg-off-white text-off-black w-full sm:w-[200px] h-[50px] rounded-[20px] hover:bg-purple-400 mt-2"
         >
           send
         </button>
