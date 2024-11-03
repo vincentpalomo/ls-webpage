@@ -12,9 +12,6 @@ const About = () => {
           <div className="font-montserrat uppercase text-[128px] sm:leading-[100px] sm:font-black text-left">
             services
           </div>
-          {/* <div className="font-montserrat uppercase 2xl:text-[11.25rem] 2xl:leading-[180px] xl:text-mac xl:leading-mac sm:absolute sm:left-[400px] 2xl:top-36 xl:top-28 text-7xl xl:tracking-title text-left leading-[40px] font-black">
-          offer
-        </div> */}
         </div>
 
         <div className="h-1/2 xl:grid xl:grid-row-3 gap-5 flex flex-col mt-20">

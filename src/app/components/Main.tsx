@@ -59,8 +59,6 @@ const Main = () => {
         </ul>
       </nav>
 
-      {/* <div className="2xl:h-[500px] xl:h-[500px] h-[350px] w-[60%] flex items-center overflow-hidden opacity-25 bg-hero-pattern mt-[70px] pointer-events-none"></div> */}
-
       <div className="flex flex-col justify-center items-center overflow-hidden h-screen w-[980px]">
         <p className="sm:text-[128px] text-7xl leading-[3.5rem] uppercase xl:tracking-[-.01em] tracking-[.1em] sm:leading-[100px] font-montserrat font-black">
           lucid studio
@@ -69,12 +67,6 @@ const Main = () => {
           embody the essence of modern design
         </p>
       </div>
-
-      {/* <div className="w-[91%] flex items-center mt-5">
-        <p className="2xl:w-[65%] text-off-grey tracking-[.06em] 2xl:leading-[1.28em] xl:leading-[1.2em] 2xl:text-[24px] xl:text-[20px] font-montserrat sm:ml-3">
-          embody the essence of modern design
-        </p>
-      </div> */}
     </main>
   );
 };
