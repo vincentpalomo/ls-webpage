@@ -49,7 +49,7 @@ export default function ContactForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="mb-8 w-full sm:w-[400px] lowercase 2xl:w-[600px] mx-0 pr-5 sm:pr-0">
+    <form onSubmit={handleSubmit} className="mb-8 w-full sm:w-[400px] lowercase 2xl:w-[600px] mx-0 pr-5 sm:pr-0 ">
       <div className="mb-4 sm:mb-1">
         {/* <label htmlFor="name" className="block mb-1 font-medium">
           Name
