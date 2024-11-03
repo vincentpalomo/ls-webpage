@@ -14,7 +14,7 @@ const Contact = () => {
       id="contact"
     >
       <div className="w-[980px] flex flex-col items-center justify-center">
-        <div className="w-[980px] sm:mt-20 mb-10 mt-20 ml-5 sm:ml-0 pointer-events-none">
+        <div className="w-[980px] sm:mt-20 mb-10 sm:mb-0 mt-20 ml-5 sm:ml-0 pointer-events-none">
           <div className="font-montserrat uppercase text-[128px] font-black">let&apos;s talk</div>
           {/* <div className="font-montserrat uppercase 2xl:text-[11.25rem] 2xl:leading-[180px] text-7xl sm:tracking-title xl:text-mac xl:leading-mac sm:ml-20">
           work
@@ -24,7 +24,7 @@ const Contact = () => {
         </div> */}
         </div>
 
-        <div className="flex items-center sm:mt-20">
+        <div className="flex items-center 2xl:mt-20 xl:mt-10">
           <p className="sm:w-[100%] tracking-[.08em] leading-[1.5em] text-[16px] font-monsterrat">
             Ready to elevate your online presence? Get in touch with us today to discuss your project and take the first
             step towards digital success. Whether you have a specific vision in mind or need guidance in shaping your

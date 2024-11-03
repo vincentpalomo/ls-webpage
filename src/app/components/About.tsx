@@ -8,8 +8,8 @@ const About = () => {
     >
       <div className="w-[960px] h-full">
         <div className="sm:relative w-full sm:w-[980px] xl:mt-20 mt-20 pointer-events-none flex flex-col">
-          <div className="font-montserrat uppercase text-[128px] 2xl:leading-[100px] sm:font-black text-left">our</div>
-          <div className="font-montserrat uppercase text-[128px] 2xl:leading-[100px] sm:font-black  text-left">
+          <div className="font-montserrat uppercase text-[128px] sm:leading-[100px] sm:font-black text-left">our</div>
+          <div className="font-montserrat uppercase text-[128px] sm:leading-[100px] sm:font-black text-left">
             services
           </div>
           {/* <div className="font-montserrat uppercase 2xl:text-[11.25rem] 2xl:leading-[180px] xl:text-mac xl:leading-mac sm:absolute sm:left-[400px] 2xl:top-36 xl:top-28 text-7xl xl:tracking-title text-left leading-[40px] font-black">
