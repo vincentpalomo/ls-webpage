@@ -14,9 +14,9 @@ const About = () => {
           </div>
         </div>
 
-        <div className="h-1/2 xl:grid xl:grid-row-3 gap-5 flex flex-col mt-20">
+        <div className="h-1/2 xl:grid xl:grid-row-3 gap-10 flex flex-col mt-20">
           <div className="w-full">
-            <h1 className="text-[20px] font-bold uppercase font-montserrat mb-3">Web design & development:</h1>
+            <h1 className="text-[20px] font-bold uppercase font-montserrat mb-1">Web design & development:</h1>
 
             <p className="text-[16px] font-monserrat leading-[1.6rem] tracking-widest text-off-grey">
               Our team of expert designers and developers creates bespoke websites tailored to your brand&apos;s unique
@@ -26,7 +26,7 @@ const About = () => {
           </div>
 
           <div className="w-full">
-            <h1 className="text-[20px] font-bold uppercase font-montserrat mb-3">Responsive Design:</h1>
+            <h1 className="text-[20px] font-bold uppercase font-montserrat mb-1">Responsive Design:</h1>
 
             <p className="text-[16px] font-monserrat leading-[1.6rem] tracking-widest text-off-grey">
               In today&apos;s mobile-first world, having a responsive website is crucial. We optimize your site to adapt
@@ -35,7 +35,7 @@ const About = () => {
           </div>
 
           <div className="w-full">
-            <h1 className="text-[20px] font-bold uppercase font-montserrat mb-3">UI/UX Design:</h1>
+            <h1 className="text-[20px] font-bold uppercase font-montserrat mb-1">UI/UX Design:</h1>
 
             <p className="text-[16px] font-monserrat leading-[1.6rem] tracking-widest text-off-grey">
               User experience is paramount in the digital realm. Our UI/UX designers create intuitive interfaces that
@@ -44,7 +44,7 @@ const About = () => {
           </div>
 
           <div className="w-full">
-            <h1 className="text-[20px] font-bold uppercase font-montserrat mb-3">seo & Digital Marketing:</h1>
+            <h1 className="text-[20px] font-bold uppercase font-montserrat mb-1">seo & Digital Marketing:</h1>
 
             <p className="text-[16px] font-monserrat leading-[1.6rem] tracking-widest text-off-grey">
               A beautiful website is only effective if it&apos;s visible to your target audience. Our SEO and digital
@@ -54,7 +54,7 @@ const About = () => {
           </div>
 
           <div className="w-full">
-            <h1 className="text-[20px] font-bold uppercase font-montserrat mb-3">Maintenance & Support:</h1>
+            <h1 className="text-[20px] font-bold uppercase font-montserrat mb-1">Maintenance & Support:</h1>
 
             <p className="text-[16px] font-monserrat leading-[1.6rem] tracking-widest text-off-grey">
               Your journey with us doesn&apos;t end at launch. We provide ongoing maintenance and support to keep your
@@ -63,7 +63,7 @@ const About = () => {
           </div>
 
           <div className="w-full">
-            <h1 className="text-[20px] font-bold uppercase font-montserrat mb-3">E-commerce Solutions:</h1>
+            <h1 className="text-[20px] font-bold uppercase font-montserrat mb-1">E-commerce Solutions:</h1>
 
             <p className="text-[16px] font-monserrat leading-[1.6rem] tracking-widest text-off-grey">
               Ready to take your business online? We specialize in building robust e-commerce platforms that drive sales
