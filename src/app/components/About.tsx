@@ -6,7 +6,7 @@ const About = () => {
       className="flex flex-col justify-center items-center min-h-screen text-off-white bg-off-black overflow-hidden"
       id="about"
     >
-      <div className="w-[960px] h-full">
+      <div className="w-[960px] h-full mt-20">
         <div className="sm:relative w-full sm:w-[980px] xl:mt-20 mt-20 pointer-events-none flex flex-col">
           <div className="font-montserrat uppercase text-[128px] sm:leading-[100px] sm:font-black text-left">our</div>
           <div className="font-montserrat uppercase text-[128px] sm:leading-[100px] sm:font-black text-left">
