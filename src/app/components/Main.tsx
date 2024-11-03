@@ -26,7 +26,7 @@ const Main = () => {
     <main className="flex min-h-screen flex-col items-center  bg-off-black text-off-white relative" id="home">
       <div className="bg-noise w-full h-screen fixed opacity-[.02] pointer-events-none"></div>
       {/* navbar */}
-      <nav className="fixed flex items-center justify-between w-[980px] font-switzer uppercase h-[5vw] px-2">
+      <nav className="fixed flex items-center justify-between w-[980px] font-switzer uppercase text-[20px] h-[5vw] px-2">
         <h1 className="cursor-pointer hover:text-purple-400 flex-1" onClick={() => scrollTo('#home', 1)}>
           lucid studio ✌
         </h1>
