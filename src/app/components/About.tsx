@@ -3,17 +3,17 @@ import React from 'react';
 const About = () => {
   return (
     <div
-      className="flex flex-col justify-center items-center min-h-screen text-off-white bg-off-black overflow-hidden px-4 sm:px-0"
+      className="flex flex-col justify-center items-center min-h-screen text-off-white bg-off-black overflow-hidden px-4 py-8 sm:px-0"
       id="about"
     >
       <div className="w-full max-w-[960px] h-full mt-20">
         <div className="w-full pointer-events-none flex flex-col mb-8">
-          <h1 className="font-montserrat uppercase text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-center sm:text-left">
+          <h1 className="font-montserrat uppercase text-6xl sm:text-[128px] sm:leading-[100px] sm:font-black text-left">
             our services
           </h1>
         </div>
 
-        <div className="grid gap-8 mt-8">
+        <div className="grid gap-8 sm:gap-10 mt-10 sm:mt-20">
           {[
             {
               title: 'Web design & development:',
