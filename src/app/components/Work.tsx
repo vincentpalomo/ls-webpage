@@ -20,7 +20,7 @@ const Work = () => {
           >
             {item}
             <span className="hidden sm:block">
-              <Image src={arrow} alt="arrow" width={24} height={24} />
+              <Image src={arrow} alt="arrow" width={48} height={48} />
             </span>
           </div>
         ))}
