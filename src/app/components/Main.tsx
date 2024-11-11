@@ -57,7 +57,7 @@ const Main = () => {
         <p className='text-7xl sm:text-[128px] leading-[60px] sm:leading-[100px] uppercase tracking-normal sm:tracking-[-.01em] font-montserrat font-black text-left sm:text-left'>
           lucid studio
         </p>
-        <p className='w-full sm:w-[65%] text-off-grey tracking-[.06em] leading-relaxed sm:leading-[1.28em] text-base sm:text-[24px] font-montserrat text-center sm:mt-0'>
+        <p className='w-full sm:w-[65%] text-off-grey tracking-[.06em] leading-relaxed sm:leading-[1.28em] text-base sm:text-[24px] font-montserrat sm:text-center text-left sm:mt-0'>
           embody the essence of modern design
         </p>
       </div>
