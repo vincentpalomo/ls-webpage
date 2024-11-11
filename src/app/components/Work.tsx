@@ -6,7 +6,7 @@ const Work = () => {
   return (
     <div className='min-h-screen bg-off-black text-off-white font-montserrat flex flex-col items-center px-4 sm:px-0 py-4' id='work'>
       <div className='w-full max-w-[960px] mt-20 mb-8'>
-        <h1 className='text-6xl sm:text-[128px] uppercase font-black text-center sm:text-left'>Our Work</h1>
+        <h1 className='text-[60px] leading-[52px] sm:text-[128px] uppercase font-black text-left sm:text-left'>Our Work</h1>
       </div>
 
       <div className='flex flex-col w-full max-w-[960px] text-2xl sm:text-4xl lg:text-5xl uppercase mt-5'>

@@ -17,3 +17,48 @@ body {
   font-family: 'switzer';
   src: url('./fonts/Switzer-Regular.ttf');
 }
+
+/* Tailwind for the mobile dropdown */
+.sm\\:hidden {
+  display: none;
+} /* Hide hamburger icon on desktop */
+.sm\\:flex {
+  display: flex;
+} /* Flexbox for desktop menu */
+.absolute {
+  position: absolute;
+}
+.bg-white {
+  background-color: white;
+}
+.block {
+  display: block;
+}
+.hidden {
+  display: none;
+}
+.transition-all {
+  transition: all 0.3s ease;
+}
+
+.hamburger-icon {
+  transition: transform 0.3s ease-in-out;
+}
+
+.hamburger-icon.open {
+  transform: rotate(45deg);
+}
+
+.hamburger-icon.open div:nth-child(1) {
+  transform: rotate(90deg);
+  margin-bottom: 0;
+}
+
+.hamburger-icon.open div:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-icon.open div:nth-child(3) {
+  transform: rotate(-90deg);
+  margin-top: 0;
+}

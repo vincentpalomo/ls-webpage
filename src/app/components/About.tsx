@@ -2,18 +2,15 @@ import React from 'react';
 
 const About = () => {
   return (
-    <div
-      className="flex flex-col justify-center items-center min-h-screen text-off-white bg-off-black overflow-hidden px-4 py-8 sm:px-0"
-      id="about"
-    >
-      <div className="w-full max-w-[960px] h-full mt-20">
-        <div className="w-full pointer-events-none flex flex-col mb-8">
-          <h1 className="font-montserrat uppercase text-6xl sm:text-[128px] sm:leading-[100px] sm:font-black text-left">
+    <div className='flex flex-col justify-center items-center min-h-screen text-off-white bg-off-black overflow-hidden px-4 py-8 sm:px-0' id='about'>
+      <div className='w-full max-w-[960px] h-full mt-20'>
+        <div className='w-full pointer-events-none flex flex-col mb-8'>
+          <h1 className='font-montserrat uppercase text-[60px] sm:text-[128px] sm:leading-[100px] font-black sm:text-left text-left leading-[52px]'>
             our services
           </h1>
         </div>
 
-        <div className="grid gap-8 sm:gap-10 mt-10 sm:mt-20">
+        <div className='grid gap-8 sm:gap-10 mt-10 sm:mt-20'>
           {[
             {
               title: 'Web design & development:',
@@ -46,11 +43,9 @@ const About = () => {
                 "Ready to take your business online? We specialize in building robust e-commerce platforms that drive sales and enhance customer engagement. From inventory management to payment integration, we've got you covered.",
             },
           ].map((service, index) => (
-            <div key={index} className="w-full">
-              <h2 className="text-lg sm:text-xl font-bold uppercase font-montserrat mb-2">{service.title}</h2>
-              <p className="text-sm sm:text-base font-montserrat leading-relaxed tracking-wide text-off-grey">
-                {service.description}
-              </p>
+            <div key={index} className='w-full'>
+              <h2 className='text-lg sm:text-xl font-bold uppercase font-montserrat mb-2'>{service.title}</h2>
+              <p className='text-sm sm:text-base font-montserrat leading-relaxed tracking-wide text-off-grey'>{service.description}</p>
             </div>
           ))}
         </div>
