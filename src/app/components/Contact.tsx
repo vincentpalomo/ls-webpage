@@ -26,7 +26,7 @@ const Contact = () => {
           {/* <h2 className="uppercase text-xl font-bold mb-4 text-center sm:text-left">say hello</h2> */}
           {/* <ContactForm /> */}
           <CalComponent />
-          <span className='absolute w-full h-10 bottom-5 bg-off-black border-2 rounded-2xl flex items-center justify-center'>thank you! 🙂</span>
+          {/* <span className='absolute w-full h-10 bottom-5 bg-off-black border-2 rounded-2xl flex items-center justify-center'>thank you! 🙂</span> */}
         </div>
       </div>
     </div>
