@@ -17,8 +17,8 @@ const Contact = () => {
         <div className='flex items-center mb-8'>
           <p className='w-full sm:w-[100%] tracking-[.08em] leading-[1.5em] text-sm sm:text-[16px] font-montserrat text-left sm:text-left'>
             Ready to elevate your online presence? Get in touch with us today to discuss your project and take the first step towards digital success.
-            Whether you have a specific vision in mind or need guidance in shaping your online strategy, our team is here to help. Reach out to us
-            below, and let&apos;s bring your digital dreams to life together.
+            Whether you have a specific vision in mind or need guidance in shaping your online strategy, our team is here to help. Schedule a 30 min
+            call with us below, and let&apos;s bring your digital dreams to life together.
           </p>
         </div>
 
