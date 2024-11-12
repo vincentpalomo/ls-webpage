@@ -27,10 +27,10 @@ const Main = () => {
 
   return (
     <main className='flex min-h-screen flex-col items-center bg-off-black text-off-white relative' id='home'>
-      <div className='bg-noise w-full h-screen fixed opacity-[.02] pointer-events-none z-10'></div>
+      <div className='bg-noise w-full h-screen fixed opacity-[.02] pointer-events-none z-20'></div>
 
       {/* Navbar */}
-      <nav className='fixed flex flex-row sm:flex-row items-center justify-between w-full sm:w-[980px] font-switzer uppercase  h-auto sm:h-[5vw] p-4 sm:px-2 bg-off-black'>
+      <nav className='fixed flex flex-row sm:flex-row items-center justify-between w-full sm:w-[980px] font-switzer uppercase  h-auto sm:h-[5vw] p-4 sm:px-2 bg-off-black z-10'>
         <h1 className='cursor-pointer sm:mb-0 text-[12px] w-2/3 sm:text-[20px]' onClick={() => scrollTo('#home', 1)}>
           lucid studio ✌
         </h1>

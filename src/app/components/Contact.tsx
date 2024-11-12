@@ -22,7 +22,7 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className='w-full relative'>
+        <div className='w-full relative z-0'>
           {/* <h2 className="uppercase text-xl font-bold mb-4 text-center sm:text-left">say hello</h2> */}
           {/* <ContactForm /> */}
           <CalComponent />
