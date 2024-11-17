@@ -3,8 +3,9 @@
 import React, { useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
-import Nav from './Nav';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
+gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(ScrollToPlugin);
 
 const Main = () => {
@@ -25,17 +26,28 @@ const Main = () => {
     }
   };
 
+  // gsap.to('#home', {
+  //   scrollTrigger: {
+  //     trigger: '#home',
+  //     markers: true,
+  //   },
+  //   opacity: 1,
+  //   duration: 1,
+  // });
+
+  // gsap.fromTo('#home', { opacity: 0 }, { opacity: 1, duration: 1 });
+
   return (
-    <main className='flex min-h-screen flex-col items-center bg-off-black text-off-white relative' id='home'>
-      <div className='bg-noise w-full h-screen fixed opacity-[.02] pointer-events-none z-20'></div>
+    <main className="flex min-h-screen flex-col items-center bg-off-black text-off-white relative" id="home">
+      <div className="bg-noise w-full h-screen fixed opacity-[.02] pointer-events-none z-20"></div>
 
       {/* Navbar */}
-      <nav className='fixed flex flex-row sm:flex-row items-center justify-between w-full sm:w-[980px] font-switzer uppercase  h-auto sm:h-[5vw] p-4 sm:px-2 bg-off-black z-10'>
-        <h1 className='cursor-pointer sm:mb-0 text-[12px] w-2/3 sm:text-[20px]' onClick={() => scrollTo('#home', 1)}>
+      <nav className="fixed flex flex-row sm:flex-row items-center justify-between w-full sm:w-[980px] font-switzer uppercase  h-auto sm:h-[5vw] p-4 sm:px-2 bg-off-black z-10">
+        <h1 className="cursor-pointer sm:mb-0 text-[12px] w-2/3 sm:text-[20px]" onClick={() => scrollTo('#home', 1)}>
           lucid studio ✌
         </h1>
 
-        <ul className='flex flex-wrap justify-end sm:justify-around space-x-2 sm:space-x-5 w-full sm:w-fit text-[12px] sm:text-[20px]'>
+        <ul className="flex flex-wrap justify-end sm:justify-around space-x-2 sm:space-x-5 w-full sm:w-fit text-[12px] sm:text-[20px]">
           {[
             // { label: 'home', selector: '#home', id: 1 },
             { label: 'about', selector: '#about', id: 2 },
@@ -44,20 +56,22 @@ const Main = () => {
           ].map((item) => (
             <li
               key={item.id}
-              className={`hover:text-purple-400 cursor-pointer ${active === item.id ? 'text-purple-400' : 'text-off-white'}`}
+              className={`hover:text-purple-400 cursor-pointer ${
+                active === item.id ? 'text-purple-400' : 'text-off-white'
+              }`}
               onClick={() => scrollTo(item.selector, item.id)}
             >
-              <button className='uppercase'>{item.label}</button>
+              <button className="uppercase">{item.label}</button>
             </li>
           ))}
         </ul>
       </nav>
 
-      <div className='flex flex-col justify-center items-center overflow-hidden h-screen w-full sm:w-[980px] px-4 sm:px-0'>
-        <p className='text-7xl sm:text-[128px] leading-[60px] sm:leading-[100px] uppercase tracking-normal sm:tracking-[-.01em] font-montserrat font-black text-left sm:text-left'>
+      <div className="flex flex-col justify-center items-center overflow-hidden h-screen w-full sm:w-[980px] px-4 sm:px-0">
+        <p className="text-7xl sm:text-[128px] leading-[60px] sm:leading-[100px] uppercase tracking-normal sm:tracking-[-.01em] font-montserrat font-black text-left sm:text-left">
           lucid studio
         </p>
-        <p className='w-full sm:w-[65%] text-off-grey tracking-[.06em] leading-relaxed sm:leading-[1.28em] text-base sm:text-[24px] font-montserrat sm:text-center text-left sm:mt-0'>
+        <p className="w-full sm:w-[65%] text-off-grey tracking-[.06em] leading-relaxed sm:leading-[1.28em] text-base sm:text-[24px] font-montserrat sm:text-center text-left sm:mt-0">
           embody the essence of modern design
         </p>
       </div>
