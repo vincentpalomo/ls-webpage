@@ -758,6 +758,22 @@ body {
     gap: 40px;
   }
 
+  .work-left-section-container {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .top-section-work {
+    height: 15vh;
+    font-size: 150px;
+  }
+
+  .bottom-section-work {
+    flex: 1;
+  }
+
   .grid-item {
     height: 80vh;
     font-size: clamp(160px, 15vw, 300px);
