@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>Portfolio</title>
+    <title>Lucid Studio</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,8 +14,14 @@
   </head>
   <body>
     <header class="nav-container">
-      <div class="nav-item">Lucid Studio</div>
+      <div class="nav-item logo">Lucid Studio</div>
+      <div class="hamburger">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
       <ul class="nav-links">
+        <li class="nav-item mobile-only">home</li>
         <li class="nav-item">about</li>
         <li class="nav-item">work</li>
         <li class="nav-item">contact</li>
@@ -173,18 +179,18 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
 
     <script>
-      // Get all nav items
+      // Get all nav items including the logo
       const navItems = document.querySelectorAll('.nav-item');
       
       // Add click handlers
       navItems.forEach(item => {
         item.addEventListener('click', (e) => {
           const text = e.target.textContent.toLowerCase();
-          console.log('Clicked:', text); // Debug click events
+          console.log('Clicked:', text);
           
           // Get target element based on clicked text
           const targetElement = document.querySelector(
-            text === 'lucid studio' ? '.main-container' :
+            text === 'lucid studio' || text === 'home' ? '.main-container' :
             text === 'about' ? '.about-container' :
             text === 'work' ? '.work-container' :
             text === 'contact' ? '.footer-container' : null
@@ -194,11 +200,32 @@
             console.log('Scrolling to:', targetElement);
             gsap.to(window, {
               duration: 1,
-              scrollTo: targetElement,
+              scrollTo: {
+                y: targetElement,
+                offsetY: text === 'about' ? 0 : 0
+              },
               ease: "power2.inOut",
               onStart: () => console.log('Animation started'),
               onComplete: () => console.log('Animation completed')
             });
+          }
+        });
+      });
+
+      // Add hamburger menu functionality
+      const hamburger = document.querySelector('.hamburger');
+      const navLinks = document.querySelector('.nav-links');
+      const bars = document.querySelectorAll('.bar');
+
+      hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+      });
+
+      // Close menu when clicking a link
+      document.querySelectorAll('.nav-item').forEach(link => {
+        link.addEventListener('click', () => {
+          if (navLinks.classList.contains('active')) {
+            navLinks.classList.remove('active');
           }
         });
       });
