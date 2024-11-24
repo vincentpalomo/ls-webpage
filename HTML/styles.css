@@ -29,7 +29,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: calc(95% - 12px);
+  /* width: calc(95% - 1px); */
+  width: 95%;
   height: 10%;
   color: #f3f3f3;
   font-family: "Inter", sans-serif;
