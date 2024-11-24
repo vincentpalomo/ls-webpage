@@ -223,6 +223,7 @@ body {
   border-radius: 4px;
   padding: 20px;
   height: 50vh;
+  align-content: center;
 }
 
 .work-right-section-container {
