@@ -762,7 +762,7 @@ body {
     height: 80vh;
     display: flex;
     flex-direction: column;
-    padding: 0;
+    gap: 40px;
   }
 
   .top-section-work {
@@ -777,6 +777,18 @@ body {
   .grid-item {
     height: 80vh;
     font-size: clamp(160px, 15vw, 300px);
+  }
+
+  .footer-container {
+    gap: 40px;
+  }
+
+  .footer-text-container {
+    gap: 40px;
+  }
+
+  .footer-title-container {
+    margin-bottom: 0;
   }
 
   .footer-text {
