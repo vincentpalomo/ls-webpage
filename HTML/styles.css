@@ -796,6 +796,10 @@ body {
     line-height: 1.6;
     letter-spacing: 2.5px;
   }
+
+  .nav-links {
+    gap: 20px;
+  }
 }
 
 html {
