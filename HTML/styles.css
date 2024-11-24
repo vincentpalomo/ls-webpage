@@ -567,6 +567,52 @@ body {
     font-size: clamp(32px, 1.8vw, 40px);
     margin-bottom: 30px;
   }
+
+  /* Main title adjustments */
+  .title-main {
+    font-size: clamp(100px, 9.5vw, 240px);
+    line-height: 1;
+    width: 100%;
+    white-space: nowrap;
+    text-align: center;
+  }
+
+  .subtext-main {
+    font-size: clamp(32px, 2vw, 48px);
+    letter-spacing: 6px;
+    margin-top: 40px;
+  }
+
+  /* Section titles */
+  .title {
+    font-size: clamp(80px, 10vw, 200px);
+    line-height: clamp(70px, 9vw, 180px);
+  }
+
+  /* About section text */
+  .about-title {
+    font-size: clamp(40px, 2.5vw, 60px);
+    margin-bottom: 40px;
+    line-height: 1.2;
+  }
+
+  .about-text {
+    font-size: clamp(24px, 1.5vw, 32px);
+    line-height: 1.6;
+    letter-spacing: 2.5px;
+  }
+
+  /* Work section text */
+  .grid-item {
+    font-size: clamp(160px, 15vw, 300px);
+  }
+
+  /* Footer text */
+  .footer-text {
+    font-size: clamp(24px, 1.5vw, 32px);
+    line-height: 1.6;
+    letter-spacing: 2.5px;
+  }
 }
 
 @media (max-width: 1024px) {
