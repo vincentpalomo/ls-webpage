@@ -125,7 +125,7 @@ body {
   padding: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
   height: auto;
 }
 
@@ -772,7 +772,7 @@ body {
   }
 
   .about-text {
-    font-size: clamp(24px, 1.5vw, 32px);
+    font-size: clamp(16px, 1.5vw, 20px);
     line-height: 1.6;
     letter-spacing: 2.5px;
   }
