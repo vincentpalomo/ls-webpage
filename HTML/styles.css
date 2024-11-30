@@ -398,7 +398,7 @@ body {
 
   .about-container {
     padding-top: 120px;
-    gap: 30px;
+    gap: 0px;
     height: auto;
     min-height: auto;
     justify-content: flex-start;
@@ -466,7 +466,7 @@ body {
 
   .work-content-container {
     flex-direction: column;
-    gap: 20px;
+    gap: 0px;
   }
 
   .work-left-section-container,
@@ -527,6 +527,7 @@ body {
   .work-left-section-container {
     width: 100%;
     height: auto;
+    gap: 0px;
   }
 
   .top-section-work {
@@ -573,7 +574,7 @@ body {
     flex-direction: column;
     gap: 20px;
     width: 100%;
-    margin-top: 40px;
+    margin-top: 20px;
   }
 
   .footer-text {
