@@ -733,12 +733,12 @@ body {
     height: auto;
     min-height: auto;
     justify-content: flex-start;
-    gap: 40px;
+    gap: 20px;
   }
 
   .about-grid {
     height: auto;
-    gap: 40px;
+    gap: 20px;
   }
 
   .work-container {
@@ -750,19 +750,19 @@ body {
 
   .work-content-container {
     height: auto;
-    gap: 40px;
+    gap: 20px;
   }
 
   .work-right-section-container {
     height: 80vh;
-    gap: 40px;
+    gap: 20px;
   }
 
   .work-left-section-container {
     height: 80vh;
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 20px;
   }
 
   .top-section-work {
@@ -780,11 +780,11 @@ body {
   }
 
   .footer-container {
-    gap: 40px;
+    gap: 20px;
   }
 
   .footer-text-container {
-    gap: 40px;
+    gap: 20px;
   }
 
   .footer-title-container {
