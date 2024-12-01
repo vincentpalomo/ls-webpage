@@ -165,7 +165,7 @@ img {
 .about-text {
   font-family: 'Inter', sans-serif;
   font-weight: 300;
-  font-size: 16px;
+  font-size: 24px;
   letter-spacing: 2px;
   line-height: 1.5;
   text-align: left;
@@ -729,6 +729,10 @@ a {
     position: relative;
   }
 
+  .about-text {
+    font-size: 16px;
+  }
+
   .about-grid {
     height: auto;
     margin-bottom: 40px;
@@ -752,6 +756,12 @@ a {
 
   .footer-container {
     padding-top: 100px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .about-text {
+    font-size: 20px;
   }
 }
 
@@ -801,7 +811,7 @@ a {
   }
 
   .about-text {
-    /* font-size: clamp(24px, 1.5vw, 32px); */
+    font-size: clamp(24px, 1.5vw, 24px);
     line-height: 1.6;
     letter-spacing: 2.5px;
   }
