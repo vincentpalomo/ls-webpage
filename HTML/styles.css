@@ -23,6 +23,10 @@ body {
   padding: 0;
 }
 
+img {
+  pointer-events: none;
+}
+
 .nav-container {
   position: fixed;
   display: flex;
@@ -125,7 +129,7 @@ body {
   padding: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   height: auto;
 }
 
@@ -161,7 +165,7 @@ body {
 .about-text {
   font-family: 'Inter', sans-serif;
   font-weight: 300;
-  font-size: 20px;
+  font-size: 16px;
   letter-spacing: 2px;
   line-height: 1.5;
   text-align: left;
@@ -170,7 +174,7 @@ body {
 
 .about-title {
   font-family: 'Inter', sans-serif;
-  font-size: 32px;
+  font-size: 24px;
   font-weight: 900;
   line-height: 1.2;
   text-transform: uppercase;
@@ -790,14 +794,14 @@ a {
   }
 
   .about-title {
-    font-size: clamp(40px, 2.5vw, 60px);
+    font-size: clamp(30px, 2.5vw, 40px);
     margin-bottom: 40px;
     line-height: 1.2;
     text-align: left;
   }
 
   .about-text {
-    font-size: clamp(24px, 1.5vw, 32px);
+    /* font-size: clamp(24px, 1.5vw, 32px); */
     line-height: 1.6;
     letter-spacing: 2.5px;
   }
@@ -870,7 +874,7 @@ a {
   }
 
   .footer-text {
-    font-size: clamp(24px, 1.5vw, 32px);
+    /* font-size: clamp(24px, 1.5vw, 32px); */
     line-height: 1.6;
     letter-spacing: 2.5px;
   }
