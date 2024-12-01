@@ -93,7 +93,7 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord) {
     
     // Apply grain with a slight color tint
     vec3 grainColor = vec3(0.5, 0.5, 0.5); // Adjust this color to tint the grain
-    finalComp = mix(finalComp, grainColor, grain);
+    // finalComp = mix(finalComp, grainColor, grain);
 
     fragColor = vec4(finalComp, 1.0);
 }
