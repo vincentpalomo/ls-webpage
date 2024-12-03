@@ -36,7 +36,7 @@ img {
   width: 95%;
   height: 10%;
   color: #f3f3f3;
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   text-transform: lowercase;
   font-weight: bolder;
   font-size: clamp(24px, 3vw, 48px);
@@ -91,7 +91,7 @@ img {
 }
 
 .title-main {
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: clamp(64px, 10vw, 200px);
   font-weight: 900;
   text-transform: uppercase;
@@ -379,7 +379,6 @@ a {
 
 /* Mobile (up to 480px) */
 @media (max-width: 480px) {
-
   /* Navigation */
   .hamburger {
     display: block;
@@ -755,7 +754,11 @@ a {
   }
 
   .footer-container {
-    padding-top: 100px;
+    padding-top: 140px;
+  }
+
+  .nav-container {
+    margin-top: 10px;
   }
 }
 
@@ -767,7 +770,6 @@ a {
 
 /* Large screens (2K and above) */
 @media (min-width: 2048px) {
-
   .nav-container,
   .main-container,
   .about-container,
@@ -918,15 +920,15 @@ html {
 }
 
 /* Transform hamburger to X when menu is active */
-.nav-links.active~.hamburger .bar:nth-child(1) {
+.nav-links.active ~ .hamburger .bar:nth-child(1) {
   transform: rotate(45deg) translate(6px, 6.5px);
 }
 
-.nav-links.active~.hamburger .bar:nth-child(2) {
+.nav-links.active ~ .hamburger .bar:nth-child(2) {
   opacity: 0;
 }
 
-.nav-links.active~.hamburger .bar:nth-child(3) {
+.nav-links.active ~ .hamburger .bar:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -5.5px);
 }
 
@@ -940,7 +942,7 @@ html {
   transition: transform 1.5s cubic-bezier(0.65, 0, 0.35, 1);
 }
 
-.nav-links.active+.hamburger .close-icon {
+.nav-links.active + .hamburger .close-icon {
   transform: rotate(180deg);
 }
 
