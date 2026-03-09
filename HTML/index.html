@@ -191,11 +191,11 @@ Cal("init", "30min", {origin:"https://cal.vincentpalomo.dev"});
 
   Cal.ns["30min"]("inline", {
     elementOrSelector:"#my-cal-inline-30min",
-    config: {"layout":"month_view"},
+    config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true","theme":"light"},
     calLink: "lucidstudio/30min",
   });
 
-  Cal.ns["30min"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+  Cal.ns["30min"]("ui", {"theme":"light","hideEventTypeDetails":false,"layout":"month_view"});
   </script>
   <!-- Cal inline embed code ends -->
       
