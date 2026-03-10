@@ -55,12 +55,15 @@
             top: 50%; left: 50%;
             transform: translate(-50%, -50%) scale(0.5);
             background: white; color: black;
-            width: 48px; height: 48px;
+            width: 72px; height: 72px;
             border-radius: 50%;
             display: flex; align-items: center; justify-content: center;
-            font-size: 20px; font-weight: 500;
+            font-size: 32px; font-weight: 700;
+            line-height: 0;
+            padding-bottom: 4px; /* Optical centering */
             opacity: 0; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             pointer-events: none;
+            z-index: 20;
         }
         .work-card:hover::after {
             opacity: 1;
@@ -123,66 +126,84 @@
                 </div>
             </section>
 
-            <!-- WORK GRID SECTION -->
-            <section class="p-6 md:p-12 grid-line-b">
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-                    
-                    <!-- Item 1 -->
-                    <div class="flex flex-col group cursor-pointer" onclick="window.location.href='prow-project.html?id=vv'">
-                        <div class="flex justify-between items-center mb-3">
-                            <p class="text-micro font-semibold">VOGUE VISION <span class="text-textMuted font-normal">/ 01</span></p>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-0 group-hover:opacity-50 transition-opacity -rotate-45"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-                        </div>
-                        <div class="aspect-[4/5] bg-[#1a1a1a] work-card p-8 md:p-12 flex items-center justify-center">
-                            <img src="img/vv-main.JPG" alt="Vogue Vision" class="w-full h-full object-cover shadow-2xl">
+            <!-- WORK GRID SECTION (Accordion) -->
+            <section class="w-full flex flex-col grid-line-b">
+                
+                <!-- Item 1 -->
+                <div class="flex flex-col group cursor-pointer border-b border-borderGrid transition-all duration-500 hover:bg-hoverBg" onclick="window.location.href='prow-project.html?id=vv'">
+                    <div class="flex items-center justify-between py-8 md:py-10 px-6 md:px-12">
+                        <h3 class="text-2xl md:text-5xl font-normal tracking-tight group-hover:pl-4 transition-all duration-300">Vogue Vision</h3>
+                        <p class="text-micro text-textMuted uppercase tracking-widest mt-1">WEBSITE DESIGN <span class="font-light">/ 01</span></p>
+                    </div>
+                    <div class="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-out">
+                        <div class="overflow-hidden">
+                            <div class="aspect-[2/1] bg-[#0f0f0f] work-card p-6 md:p-16 flex items-center justify-center relative mx-6 md:mx-12 mb-8 md:mb-10">
+                                <img src="img/vv-main.JPG" alt="Vogue Vision" class="w-full h-full object-contain shadow-2xl">
+                            </div>
                         </div>
                     </div>
-
-                    <!-- Item 2 -->
-                    <div class="flex flex-col group cursor-pointer" onclick="window.location.href='prow-project.html?id=gn'">
-                        <div class="flex justify-between items-center mb-3">
-                            <p class="text-micro font-semibold">GOODNIGHT <span class="text-textMuted font-normal">/ 02</span></p>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-0 group-hover:opacity-50 transition-opacity -rotate-45"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-                        </div>
-                        <div class="aspect-[4/5] bg-[#e3e1d9] work-card p-8 md:p-12 flex items-center justify-center">
-                            <img src="img/gn-main.JPG" alt="GOODNIGHT" class="w-full h-full object-cover shadow-2xl">
-                        </div>
-                    </div>
-
-                    <!-- Item 3 -->
-                    <div class="flex flex-col group cursor-pointer" onclick="window.location.href='prow-project.html?id=hz'">
-                        <div class="flex justify-between items-center mb-3">
-                            <p class="text-micro font-semibold">HORIZONS <span class="text-textMuted font-normal">/ 03</span></p>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-0 group-hover:opacity-50 transition-opacity -rotate-45"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-                        </div>
-                        <div class="aspect-[4/5] bg-[#ead9b1] work-card p-8 md:p-12 flex items-center justify-center">
-                            <img src="img/hz-main.JPG" alt="Horizons" class="w-full h-full object-cover shadow-2xl">
-                        </div>
-                    </div>
-
-                    <!-- Item 4 -->
-                    <div class="flex flex-col group cursor-pointer" onclick="window.location.href='prow-project.html?id=cc'">
-                        <div class="flex justify-between items-center mb-3 mt-4 md:mt-0">
-                            <p class="text-micro font-semibold">CRIMSON COLLECTIVE <span class="text-textMuted font-normal">/ 04</span></p>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-0 group-hover:opacity-50 transition-opacity -rotate-45"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-                        </div>
-                        <div class="aspect-[4/5] bg-[#dfd6ce] work-card p-8 md:p-12 flex items-center justify-center">
-                            <img src="img/cc-main.JPG" alt="Crimson Collective" class="w-full h-full object-cover shadow-2xl">
-                        </div>
-                    </div>
-                    
-                    <!-- Item 5 - Big spans 2 columns on lg -->
-                    <div class="flex flex-col group cursor-pointer lg:col-span-2" onclick="window.location.href='prow-project.html?id=pds'">
-                        <div class="flex justify-between items-center mb-3 mt-4 md:mt-0">
-                            <p class="text-micro font-semibold">PERIPHERAL DRONES <span class="text-textMuted font-normal">/ 05</span></p>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-0 group-hover:opacity-50 transition-opacity -rotate-45"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-                        </div>
-                        <div class="aspect-[2/1] bg-[#111111] work-card p-8 md:p-16 flex items-center justify-center">
-                            <img src="img/pds-main.JPG" alt="Peripheral Drones" class="h-full object-contain shadow-2xl">
-                        </div>
-                    </div>
-
                 </div>
+
+                <!-- Item 2 -->
+                <div class="flex flex-col group cursor-pointer border-b border-borderGrid transition-all duration-500 hover:bg-hoverBg" onclick="window.location.href='prow-project.html?id=gn'">
+                    <div class="flex items-center justify-between py-8 md:py-10 px-6 md:px-12">
+                        <h3 class="text-2xl md:text-5xl font-normal tracking-tight group-hover:pl-4 transition-all duration-300">Goodnight</h3>
+                        <p class="text-micro text-textMuted uppercase tracking-widest mt-1">WEBSITE DESIGN <span class="font-light">/ 02</span></p>
+                    </div>
+                    <div class="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-out">
+                        <div class="overflow-hidden">
+                            <div class="aspect-[2/1] bg-[#ead9b1] work-card p-6 md:p-16 flex items-center justify-center relative mx-6 md:mx-12 mb-8 md:mb-10">
+                                <img src="img/gn-main.JPG" alt="GOODNIGHT" class="w-full h-full object-contain shadow-2xl">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="flex flex-col group cursor-pointer border-b border-borderGrid transition-all duration-500 hover:bg-hoverBg" onclick="window.location.href='prow-project.html?id=hz'">
+                    <div class="flex items-center justify-between py-8 md:py-10 px-6 md:px-12">
+                        <h3 class="text-2xl md:text-5xl font-normal tracking-tight group-hover:pl-4 transition-all duration-300">Horizons</h3>
+                        <p class="text-micro text-textMuted uppercase tracking-widest mt-1">WEBSITE DESIGN <span class="font-light">/ 03</span></p>
+                    </div>
+                    <div class="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-out">
+                        <div class="overflow-hidden">
+                            <div class="aspect-[2/1] bg-[#e3e1d9] work-card p-6 md:p-16 flex items-center justify-center relative mx-6 md:mx-12 mb-8 md:mb-10">
+                                <img src="img/hz-main.JPG" alt="Horizons" class="w-full h-full object-contain shadow-2xl">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="flex flex-col group cursor-pointer border-b border-borderGrid transition-all duration-500 hover:bg-hoverBg" onclick="window.location.href='prow-project.html?id=cc'">
+                    <div class="flex items-center justify-between py-8 md:py-10 px-6 md:px-12">
+                        <h3 class="text-2xl md:text-5xl font-normal tracking-tight group-hover:pl-4 transition-all duration-300">Crimson Collective</h3>
+                        <p class="text-micro text-textMuted uppercase tracking-widest mt-1">WEBSITE DESIGN <span class="font-light">/ 04</span></p>
+                    </div>
+                    <div class="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-out">
+                        <div class="overflow-hidden">
+                            <div class="aspect-[2/1] bg-[#dfd6ce] work-card p-6 md:p-16 flex items-center justify-center relative mx-6 md:mx-12 mb-8 md:mb-10">
+                                <img src="img/cc-main.JPG" alt="Crimson Collective" class="w-full h-full object-contain shadow-2xl">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="flex flex-col group cursor-pointer transition-all duration-500 hover:bg-hoverBg" onclick="window.location.href='prow-project.html?id=pds'">
+                    <div class="flex items-center justify-between py-8 md:py-10 px-6 md:px-12">
+                        <h3 class="text-2xl md:text-5xl font-normal tracking-tight group-hover:pl-4 transition-all duration-300">Peripheral Drones</h3>
+                        <p class="text-micro text-textMuted uppercase tracking-widest mt-1">WEBSITE DESIGN <span class="font-light">/ 05</span></p>
+                    </div>
+                    <div class="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-out">
+                        <div class="overflow-hidden">
+                            <div class="aspect-[2/1] bg-[#e5e5e5] work-card p-6 md:p-16 flex items-center justify-center relative mx-6 md:mx-12 mb-8 md:mb-10">
+                                <img src="img/pds-main.JPG" alt="Peripheral Drones" class="w-full h-full object-contain shadow-2xl">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </section>
             
             <!-- INFO & PRICING SECTION (Text layout from second ref image) -->
