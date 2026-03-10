@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucid Studio - Project Details</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        bg: '#ffffff',
+                        textMain: '#000000',
+                        textMuted: '#8a8a8a',
+                        borderGrid: '#e5e5e5',
+                        hoverBg: '#f2f2f2'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: transparent; }
+        #bg-canvas-container {
+            position: fixed;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            z-index: -10; pointer-events: none;
+            opacity: 0.15;
+        }
+        #shader-canvas { width: 100%; height: 100%; }
+        
+        .grid-line-b { border-bottom: 1px solid theme('colors.borderGrid'); }
+        .grid-line-t { border-top: 1px solid theme('colors.borderGrid'); }
+        .grid-line-r { border-right: 1px solid theme('colors.borderGrid'); }
+        
+        .text-micro {
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            line-height: 1.5;
+        }
+        
+        .main-container {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="text-textMain font-sans antialiased">
+    <!-- Shader Background (subdued for minimalist design) -->
+    <div id="bg-canvas-container">
+        <canvas id="shader-canvas"></canvas>
+    </div>
+    <script src="shader.js" defer></script>
+
+    <div class="w-full min-h-screen flex justify-center p-4 md:p-8">
+        <main class="w-full max-w-[1400px] main-container border border-borderGrid min-h-[90vh] flex flex-col">
+            
+            <!-- HEADER LOGO AREA -->
+            <header class="w-full pt-12 pb-6 px-6 md:px-12 grid-line-b flex items-end justify-between">
+                <div class="flex items-center gap-3">
+                    <a href="minimal-index.html" class="text-5xl md:text-7xl lg:text-[100px] font-medium tracking-tight leading-none hover:opacity-70 transition-opacity">Lucid Studio</a>
+                    <span class="bg-black text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-widest relative top-[-10px] md:top-[-20px]">.DEV</span>
+                </div>
+            </header>
+
+            <!-- PROJECT DETAILS CONTENT -->
+            <section class="grid grid-cols-1 md:grid-cols-2 flex-grow">
+                <!-- Left Details Info -->
+                <div class="p-6 md:p-12 md:grid-line-r flex flex-col justify-between grid-line-b md:border-b-0 h-full gap-16">
+                    <div>
+                        <div class="mb-12">
+                            <h2 id="project-title" class="text-lg md:text-xl font-bold mb-1">Project Name</h2>
+                            <p class="text-micro text-textMuted uppercase tracking-widest">WEBSITE DESIGN <span class="text-textMuted">/ 01</span></p>
+                        </div>
+                        
+                        <div class="flex flex-col gap-6 w-full mt-12 mb-16">
+                            <div class="flex items-center justify-between grid-line-b pb-4">
+                                <span class="font-medium text-sm">Client</span>
+                                <span id="project-client" class="text-micro text-textMuted">LUCID STUDIOS</span>
+                            </div>
+                            <div class="flex items-center justify-between grid-line-b pb-4">
+                                <span class="font-medium text-sm">Live preview</span>
+                                <a id="project-link" href="#" target="_blank" class="text-micro uppercase underline hover:text-textMuted transition-colors">WWW.LUCIDSTUDIO.DEV</a>
+                            </div>
+                            <div class="flex items-center justify-between grid-line-b pb-4">
+                                <span class="font-medium text-sm">Date</span>
+                                <span class="text-micro text-textMuted">FEBRUARY 2026</span>
+                            </div>
+                            <div class="flex justify-between items-start grid-line-b pb-4 pt-4">
+                                <span class="font-medium text-sm">Development</span>
+                                <div class="flex flex-col text-right">
+                                    <span class="text-micro text-textMuted">WIREFRAME</span>
+                                    <span class="text-micro text-textMuted">DESIGN</span>
+                                    <span class="text-micro text-textMuted">NO-CODE</span>
+                                    <span class="text-micro text-textMuted">AWARDS CAMPAIGN</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p id="project-desc" class="text-lg md:text-2xl leading-normal font-normal">
+                            Bespoke website design with adaptation and development to display on all resolutions — all in a modern atmosphere and subtle aesthetics.
+                        </p>
+                    </div>
+
+                    <div>
+                        <a href="minimal-index.html" class="inline-flex items-center justify-center w-12 h-12 bg-hoverBg hover:bg-black hover:text-white rounded-full transition-colors border border-borderGrid cursor-pointer">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" class="rotate-180" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Project Image Preview Area -->
+                <div class="p-6 md:p-12 flex flex-col gap-12 h-full justify-between items-end bg-[#0f0f0f]">
+                     <div class="text-right w-full">
+                         <span class="text-micro text-textMuted">2026</span>
+                     </div>
+                     
+                     <!-- Dynamic Image container -->
+                     <div class="w-full flex-grow flex items-center justify-center p-4">
+                        <img id="project-image" src="img/vv-main.JPG" alt="Project Preview" class="max-w-full max-h-[60vh] object-contain shadow-2xl">
+                     </div>
+                </div>
+            </section>
+            
+            <!-- PRICING / BOOKING SECTION -->
+            <section class="grid grid-cols-1 md:grid-cols-2 grid-line-t">
+                <!-- Pricing Left -->
+                <div class="p-6 md:p-12 md:grid-line-r grid-line-b md:border-b-0 bg-[#fbfbfb]">
+                    <div class="mb-12">
+                        <p class="text-micro font-semibold mb-4 text-textMuted">LUCID STUDIO PRICING</p>
+                        <h3 class="text-xl md:text-3xl font-normal leading-snug tracking-tight mb-4">
+                            Web packages designed for clarity and results.
+                        </h3>
+                        <p class="text-sm text-textMuted mb-10 max-w-sm leading-relaxed">
+                            Every project includes custom design, responsive layout, SEO optimization, and 1 month of free maintenance.
+                        </p>
+                    </div>
+                    
+                    <div class="flex flex-col border-t border-borderGrid">
+                        <div class="flex justify-between items-center py-5 grid-line-b group">
+                            <h4 class="text-sm font-semibold tracking-wide uppercase">Landing Page</h4>
+                            <span class="text-sm text-textMuted">$299</span>
+                        </div>
+                        <div class="flex justify-between items-center py-5 grid-line-b group">
+                            <h4 class="text-sm font-semibold tracking-wide uppercase">Standard Website</h4>
+                            <span class="text-sm text-textMuted">$499</span>
+                        </div>
+                        <div class="flex justify-between items-center py-5 grid-line-b group">
+                            <h4 class="text-sm font-semibold tracking-wide uppercase">E-commerce Platform</h4>
+                            <span class="text-sm text-textMuted">$999</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Booking Right (Cal) -->
+                <div class="p-6 md:p-12 flex flex-col justify-center bg-white h-full relative">
+                    <p class="text-micro font-semibold text-center mb-8 uppercase tracking-widest text-textMuted">Let's Connect</p>
+                    <div class="w-full h-full min-h-[400px]">
+                        <div style="width:100%;height:100%;overflow:scroll" id="my-cal-inline-30min"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FOOTER -->
+            <footer class="pt-8 pb-4 px-6 md:px-12 grid-line-t flex flex-col md:flex-row justify-between items-start md:items-end gap-6 text-micro text-textMuted">
+                <div class="flex flex-col gap-1">
+                    <p class="font-semibold text-textMain">Instagram<br>Linkedin</p>
+                    <a href="#" class="hover:text-textMain transition-colors mt-2">COOPERATION</a>
+                </div>
+                
+                <div class="md:absolute md:left-1/2 md:-translate-x-1/2">
+                    <p class="font-bold text-textMain tracking-widest">LUCIDSTUDIO.DEV</p>
+                </div>
+
+                <div class="text-right">
+                    <p>&copy;2026</p>
+                </div>
+            </footer>
+            
+        </main>
+    </div>
+
+    <!-- Script to handle dynamic project loading -->
+    <script>
+        const projects = {
+            'vv': {
+                title: 'Vogue Vision',
+                client: 'VOGUE',
+                url: 'https://voguevision.lucidstudio.dev',
+                displayUrl: 'WWW.VOGUEVISION.DEV',
+                img: 'img/vv-main.JPG',
+                desc: 'A sleek, fashionable landing page blending minimalism and modern typography to highlight editorial perfection.'
+            },
+            'gn': {
+                title: 'GOODNIGHT',
+                client: 'GOODNIGHT MUSIC',
+                url: 'https://goodnight.lucidstudio.dev',
+                displayUrl: 'WWW.GOODNIGHT.DEV',
+                img: 'img/gn-main.JPG',
+                desc: 'An immersive band portfolio with integrated audio streaming and dark mode brutalism for a visceral fan experience.'
+            },
+            'hz': {
+                title: 'Horizons',
+                client: 'HORIZONS CORP',
+                url: 'https://horizons.lucidstudio.dev',
+                displayUrl: 'WWW.HORIZONS.DEV',
+                img: 'img/hz-main.JPG',
+                desc: 'Corporate web application emphasizing clean data display, seamless animations, and extreme operational reliability.'
+            },
+            'cc': {
+                title: 'Crimson Collective',
+                client: 'CRIMSON DAO',
+                url: 'https://crimsoncollective.lucidstudio.dev',
+                displayUrl: 'WWW.CRIMSONCOLLECTIVE.DEV',
+                img: 'img/cc-main.JPG',
+                desc: 'Web3 onboarding portal with interactive 3D elements, seamless wallet integration, and dynamic gradient UI.'
+            },
+            'pds': {
+                title: 'Peripheral Drones',
+                client: 'PERIPHERAL LOGISTICS',
+                url: 'https://peripheral.lucidstudio.dev',
+                displayUrl: 'WWW.PERIPHERALDRONES.DEV',
+                img: 'img/pds-main.JPG',
+                desc: 'High-tech service provider landing page focusing on bold iconography, structured grids, and fast conversion funnels.'
+            }
+        };
+
+        // Parse URL params
+        const urlParams = new URLSearchParams(window.location.search);
+        const projectId = urlParams.get('id');
+
+        if(projectId && projects[projectId]) {
+            const p = projects[projectId];
+            document.getElementById('project-title').textContent = p.title;
+            document.getElementById('project-client').textContent = p.client;
+            document.getElementById('project-link').href = p.url;
+            document.getElementById('project-link').textContent = p.displayUrl;
+            document.getElementById('project-desc').textContent = p.desc;
+            document.getElementById('project-image').src = p.img;
+        }
+    </script>
+    
+    <!-- Calendly Script -->
+    <script type="text/javascript">
+      (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://cal.vincentpalomo.dev/embed/embed.js", "init");
+      Cal("init", "30min", {origin:"https://cal.vincentpalomo.dev"});
+      Cal.ns["30min"]("inline", {
+        elementOrSelector:"#my-cal-inline-30min",
+        config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true","theme":"light"},
+        calLink: "lucidstudio/30min",
+      });
+      Cal.ns["30min"]("ui", {"theme":"light","hideEventTypeDetails":false,"layout":"month_view"});
+    </script>
+</body>
+</html>
