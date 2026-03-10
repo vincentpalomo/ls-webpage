@@ -1,263 +1,276 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <title>Lucid Studio</title>
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-    rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucid Studio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        bg: '#ffffff',
+                        textMain: '#000000',
+                        textMuted: '#8a8a8a',
+                        borderGrid: '#e5e5e5',
+                        hoverBg: '#f2f2f2'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: transparent; }
+        #bg-canvas-container {
+            position: fixed;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            z-index: -10; pointer-events: none;
+            opacity: 0.15; /* Making the shader subtle so the minimalist design pops */
+        }
+        #shader-canvas { width: 100%; height: 100%; }
+        
+        .grid-line-b { border-bottom: 1px solid theme('colors.borderGrid'); }
+        .grid-line-t { border-top: 1px solid theme('colors.borderGrid'); }
+        
+        /* Typography utilities as seen in the mockup */
+        .text-micro {
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            line-height: 1.5;
+        }
+
+        /* Hover image arrow */
+        .work-card { position: relative; overflow: hidden; }
+        .work-card::after {
+            content: '→';
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%) scale(0.5);
+            background: white; color: black;
+            width: 48px; height: 48px;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 20px; font-weight: 500;
+            opacity: 0; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            pointer-events: none;
+        }
+        .work-card:hover::after {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+        }
+        .work-card img {
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .work-card:hover img {
+            transform: scale(1.03);
+        }
+        
+        .main-container {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+    </style>
 </head>
-
-<body>
-  <header class="nav-container">
-    <div class="nav-item logo">Lucid Studio</div>
-    <ul class="nav-links">
-      <li class="nav-item mobile-only">home</li>
-      <li class="nav-item">about</li>
-      <li class="nav-item">work</li>
-      <li class="nav-item">contact</li>
-    </ul>
-    <div class="hamburger">
-      <div class="bar"></div>
-      <div class="bar"></div>
-      <div class="bar"></div>
+<body class="text-textMain font-sans antialiased">
+    <!-- Shader Background (subdued for minimalist design) -->
+    <div id="bg-canvas-container">
+        <canvas id="shader-canvas"></canvas>
     </div>
-  </header>
+    <script src="shader.js" defer></script>
 
-  <div class="main-container">
-    <div class="title-main">lucid studio</div>
-    <span class="subtext-main">embody the essence of modern design</span>
-  </div>
+    <div class="w-full min-h-screen flex justify-center p-4 md:p-8">
+        <main class="w-full max-w-[1400px] main-container border border-borderGrid">
+            
+            <!-- HEADER LOGO AREA -->
+            <header class="w-full pt-12 pb-6 px-6 md:px-12 grid-line-b flex items-end justify-between">
+                <div class="flex items-center gap-3">
+                    <h1 class="text-5xl md:text-7xl lg:text-[100px] font-medium tracking-tight leading-none">Lucid Studio</h1>
+                    <span class="bg-black text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-widest relative top-[-10px] md:top-[-20px]">.DEV</span>
+                </div>
+            </header>
 
-  <div class="about-container">
-    <div class="title-container">
-      <div class="title">our services</div>
+            <!-- INTRO SECTION -->
+            <section class="grid grid-cols-1 md:grid-cols-12 px-6 md:px-12 py-12 lg:py-24 grid-line-b gap-12 md:gap-6">
+                <!-- Left Details -->
+                <div class="md:col-span-3 flex flex-col justify-between">
+                    <div>
+                        <p class="text-micro font-semibold mb-1">AVAILABLE FOR WORK</p>
+                        <p class="text-micro text-textMuted">2026</p>
+                    </div>
+                </div>
+
+                <!-- Right Big Text -->
+                <div class="md:col-span-9 md:pl-12">
+                    <h2 class="text-xl md:text-3xl lg:text-4xl font-normal leading-snug tracking-tight max-w-4xl">
+                        Expert designers & developers creating bespoke websites from concept to launch. We handle every aspect of the development process to ensure a seamless online presence.
+                    </h2>
+                    <p class="text-textMuted text-lg md:text-xl lg:text-2xl mt-4 font-light max-w-3xl">
+                        Ready to elevate your business with modern, responsive aesthetics and robust functionality.
+                    </p>
+                    
+                    <a href="#contact" class="mt-12 inline-flex items-center justify-center w-12 h-12 bg-hoverBg hover:bg-black hover:text-white rounded-full transition-colors border border-borderGrid">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" class="rotate-90" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </section>
+
+            <!-- WORK GRID SECTION -->
+            <section class="p-6 md:p-12 grid-line-b">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                    
+                    <!-- Item 1 -->
+                    <div class="flex flex-col group cursor-pointer" onclick="window.location.href='prow-project.html?id=vv'">
+                        <div class="flex justify-between items-center mb-3">
+                            <p class="text-micro font-semibold">VOGUE VISION <span class="text-textMuted font-normal">/ 01</span></p>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-0 group-hover:opacity-50 transition-opacity -rotate-45"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                        </div>
+                        <div class="aspect-[4/5] bg-[#1a1a1a] work-card p-8 md:p-12 flex items-center justify-center">
+                            <img src="img/vv-main.JPG" alt="Vogue Vision" class="w-full h-full object-cover shadow-2xl">
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="flex flex-col group cursor-pointer" onclick="window.location.href='prow-project.html?id=gn'">
+                        <div class="flex justify-between items-center mb-3">
+                            <p class="text-micro font-semibold">GOODNIGHT <span class="text-textMuted font-normal">/ 02</span></p>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-0 group-hover:opacity-50 transition-opacity -rotate-45"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                        </div>
+                        <div class="aspect-[4/5] bg-[#e3e1d9] work-card p-8 md:p-12 flex items-center justify-center">
+                            <img src="img/gn-main.JPG" alt="GOODNIGHT" class="w-full h-full object-cover shadow-2xl">
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="flex flex-col group cursor-pointer" onclick="window.location.href='prow-project.html?id=hz'">
+                        <div class="flex justify-between items-center mb-3">
+                            <p class="text-micro font-semibold">HORIZONS <span class="text-textMuted font-normal">/ 03</span></p>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-0 group-hover:opacity-50 transition-opacity -rotate-45"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                        </div>
+                        <div class="aspect-[4/5] bg-[#ead9b1] work-card p-8 md:p-12 flex items-center justify-center">
+                            <img src="img/hz-main.JPG" alt="Horizons" class="w-full h-full object-cover shadow-2xl">
+                        </div>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="flex flex-col group cursor-pointer" onclick="window.location.href='prow-project.html?id=cc'">
+                        <div class="flex justify-between items-center mb-3 mt-4 md:mt-0">
+                            <p class="text-micro font-semibold">CRIMSON COLLECTIVE <span class="text-textMuted font-normal">/ 04</span></p>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-0 group-hover:opacity-50 transition-opacity -rotate-45"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                        </div>
+                        <div class="aspect-[4/5] bg-[#dfd6ce] work-card p-8 md:p-12 flex items-center justify-center">
+                            <img src="img/cc-main.JPG" alt="Crimson Collective" class="w-full h-full object-cover shadow-2xl">
+                        </div>
+                    </div>
+                    
+                    <!-- Item 5 - Big spans 2 columns on lg -->
+                    <div class="flex flex-col group cursor-pointer lg:col-span-2" onclick="window.location.href='prow-project.html?id=pds'">
+                        <div class="flex justify-between items-center mb-3 mt-4 md:mt-0">
+                            <p class="text-micro font-semibold">PERIPHERAL DRONES <span class="text-textMuted font-normal">/ 05</span></p>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-0 group-hover:opacity-50 transition-opacity -rotate-45"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                        </div>
+                        <div class="aspect-[2/1] bg-[#111111] work-card p-8 md:p-16 flex items-center justify-center">
+                            <img src="img/pds-main.JPG" alt="Peripheral Drones" class="h-full object-contain shadow-2xl">
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            
+            <!-- INFO & PRICING SECTION (Text layout from second ref image) -->
+            <section class="grid grid-cols-1 md:grid-cols-2 p-6 md:p-12 grid-line-b gap-12">
+                <!-- Left Details -->
+                <div class="flex flex-col justify-between">
+                    <div class="mb-12">
+                        <p class="text-micro font-semibold mb-4 text-textMuted">LUCID STUDIO</p>
+                        <p class="text-micro max-w-xs leading-relaxed text-textMuted">WE CRAFT UNIQUE DIGITAL EXPERIENCES. FROM SLEEK RESPONSIVE WEBSITES TO ROBUST E-COMMERCE PLATFORMS, OUR PORTFOLIO SHOWCASES A COMMITMENT TO FUNCTIONALITY AND USER EXPERIENCE.</p>
+                    </div>
+                    
+                    <div class="flex gap-16">
+                        <div class="flex flex-col gap-3 text-sm font-medium">
+                            <a href="#" class="hover:text-textMuted transition-colors">UI/UX Design</a>
+                            <a href="#" class="hover:text-textMuted transition-colors">Web Development</a>
+                            <a href="#" class="hover:text-textMuted transition-colors">E-commerce Solutions</a>
+                            <a href="#" class="hover:text-textMuted transition-colors">SEO & Marketing</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Pricing/Services (Styled like big text from ref) -->
+                <div>
+                     <h3 class="text-xl md:text-2xl font-normal leading-snug tracking-tight mb-8">
+                        Lucid Studio — We have created custom solutions for brands. Ready to create new goals and impressions.
+                    </h3>
+                    <p class="text-sm text-textMuted mb-10 max-w-sm leading-relaxed">
+                        In today's mobile-first world, having a responsive website is crucial. We bring robust solutions and modern aesthetics.
+                    </p>
+                    
+                    <!-- Pricing Rows -->
+                    <div class="flex flex-col border-t border-borderGrid">
+                        <div class="flex justify-between items-center py-5 grid-line-b group cursor-pointer hover:pl-2 transition-all">
+                            <h4 class="text-lg md:text-xl font-medium tracking-tight">Landing Page</h4>
+                            <span class="text-sm font-semibold tracking-wider">$299</span>
+                        </div>
+                        <div class="flex justify-between items-center py-5 grid-line-b group cursor-pointer hover:pl-2 transition-all">
+                            <h4 class="text-lg md:text-xl font-medium tracking-tight">Standard Website</h4>
+                            <span class="text-sm font-semibold tracking-wider">$499</span>
+                        </div>
+                        <div class="flex justify-between items-center py-5 grid-line-b group cursor-pointer hover:pl-2 transition-all">
+                            <h4 class="text-lg md:text-xl font-medium tracking-tight">E-commerce Platform</h4>
+                            <span class="text-sm font-semibold tracking-wider">$999</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- BOOKING SECTION -->
+            <section id="contact" class="p-6 md:p-12 bg-hoverBg grid-line-b flex flex-col items-center justify-center">
+                <p class="text-micro font-semibold text-center mb-2">LET'S CONNECT</p>
+                <h3 class="text-3xl md:text-5xl font-medium tracking-tight text-center mb-8">Book a 30m Consultation</h3>
+                <div class="w-full max-w-3xl bg-white rounded-xl shadow-lg h-[400px] border border-borderGrid overflow-hidden">
+                    <div style="width:100%;height:100%;overflow:scroll" id="my-cal-inline-30min"></div>
+                </div>
+            </section>
+
+            <!-- FOOTER -->
+            <footer class="pt-8 pb-4 px-6 md:px-12 flex flex-col md:flex-row justify-between items-start md:items-end gap-6 text-micro text-textMuted">
+                <div class="flex flex-col gap-1">
+                    <p class="font-semibold text-textMain">Socials</p>
+                    <a href="#" class="hover:text-textMain transition-colors">Instagram</a>
+                    <a href="#" class="hover:text-textMain transition-colors">Behance</a>
+                    <a href="#" class="hover:text-textMain transition-colors">Twitter</a>
+                </div>
+                
+                <div>
+                    <p>hello@lucidstudio.dev</p>
+                </div>
+
+                <div class="text-right">
+                    <p class="font-semibold text-textMain">LUCIDSTUDIO.DEV</p>
+                    <p>&copy;2026</p>
+                </div>
+            </footer>
+            
+        </main>
     </div>
-
-    <div class="about-grid">
-      <div class="about-text-container">
-        <div class="about-title">Web design & development</div>
-        <p class="about-text">
-          Our team of expert designers and developers creates bespoke websites tailored to your brand's unique
-          identity and goals. From concept to launch, we handle every aspect of the development process to ensure a
-          seamless online presence.
-        </p>
-      </div>
-      <div class="about-text-container">
-        <div class="about-title">Responsive Design</div>
-        <p class="about-text">
-          In today's mobile-first world, having a responsive website is crucial. We optimize your site to adapt
-          seamlessly to any screen size, ensuring a consistent and user-friendly experience across all devices.
-        </p>
-      </div>
-      <div class="about-text-container">
-        <div class="about-title">UI/UX Design</div>
-        <p class="about-text">
-          User experience is paramount in the digital realm. Our UI/UX designers create intuitive interfaces that
-          guide users through your site effortlessly, maximizing engagement and conversions.
-        </p>
-      </div>
-      <div class="about-text-container">
-        <div class="about-title">SEO & Digital Marketing</div>
-        <p class="about-text">
-          A beautiful website is only effective if it's visible to your target audience. Our SEO and digital marketing
-          experts employ proven strategies to boost your online visibility and drive qualified traffic to your site.
-        </p>
-      </div>
-      <div class="about-text-container">
-        <div class="about-title">Maintenance & Support</div>
-        <p class="about-text">
-          Your journey with us doesn't end at launch. We provide ongoing maintenance and support to keep your website
-          running smoothly and up-to-date with the latest trends and technologies.
-        </p>
-      </div>
-      <div class="about-text-container">
-        <div class="about-title">E-commerce Solutions</div>
-        <p class="about-text">
-          Ready to take your business online? We specialize in building robust e-commerce platforms that drive sales
-          and enhance customer engagement. From inventory management to payment integration, we've got you covered.
-        </p>
-      </div>
-    </div>
-  </div>
-
-  <div class="work-container">
-    <div class="work-content-container">
-      <!-- left container -->
-      <div class="work-left-section-container">
-        <div class="title work-title top-section-work">our work</div>
-        <p class="about-text bottom-section-work">
-          We take pride in crafting unique digital experiences that help our clients stand out. From sleek and
-          responsive websites to robust e-commerce platforms and innovative mobile apps, our portfolio showcases a
-          range of projects tailored to diverse industries. Each project is a testament to our commitment to
-          creativity, functionality, and user experience. Explore our previous work to see how we’ve helped businesses
-          like yours achieve their goals with cutting-edge design and development.
-        </p>
-      </div>
-      <!-- right container -->
-      <div class="work-right-section-container">
-        <div class="grid-item">
-          <div class="grid-item-container">
-            <div class="grid-item-image">
-              <img src="img/vv-main.JPG" alt="social media">
-            </div>
-            <div class="grid-item-text">
-              <div>Vogue Vision</div>
-              <a href="https://voguevision.lucidstudio.dev" target="_blank">→</a>
-            </div>
-          </div>
-        </div>
-        <div class="grid-item">
-          <div class="grid-item-container">
-            <div class="grid-item-image">
-              <img src="img/gn-main.JPG" alt="goodnight">
-            </div>
-            <div class="grid-item-text">
-              <div>GOODNIGHT</div>
-              <a href="https://goodnight.lucidstudio.dev" target="_blank">→</a>
-            </div>
-          </div>
-        </div>
-        <div class="grid-item">
-          <div class="grid-item-container">
-            <div class="grid-item-image">
-              <img src="img/hz-main.JPG" alt="horizons">
-            </div>
-            <div class="grid-item-text">
-              <div>Horizons</div>
-              <a href="https://horizons.lucidstudio.dev" target="_blank">→</a>
-            </div>
-          </div>
-        </div>
-        <div class="grid-item">
-          <div class="grid-item-container">
-            <div class="grid-item-image">
-              <img src="img/cc-main.JPG" alt="crimson collective">
-            </div>
-            <div class="grid-item-text">
-              <div>Crimson Collective</div>
-              <a href="https://crimsoncollective.lucidstudio.dev" target="_blank">→</a>
-            </div>
-          </div>
-        </div>
-        <div class="grid-item">
-          <div class="grid-item-container">
-            <div class="grid-item-image">
-              <img src="img/pds-main.JPG" alt="Peripheral Drone Services">
-            </div>
-            <div class="grid-item-text">
-              <div>Peripheral Drone Services</div>
-              <a href="https://peripheral.lucidstudio.dev" target="_blank">→</a>
-            </div>
-          </div>
-        </div>
-        <div class="grid-item">
-          <div class="grid-item-container">
-            <div class="grid-item-image">
-              <img src="img/m-main.JPG" alt="Mocha">
-            </div>
-            <div class="grid-item-text">
-              <div>Mocha</div>
-              <a href="https://mocha.lucidstudio.dev" target="_blank">→</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="footer-container">
-    <div class="footer-title-container">
-      <div class="title">Let's Connect</div>
-    </div>
-    <div class="footer-text-container">
-      <p class="about-text footer-text">
-        Ready to elevate your online presence? Get in touch with us today to discuss your project and take the first
-        step towards digital success. Whether you have a specific vision in mind or need guidance in shaping your
-        online strategy, our team is here to help. Schedule a 30 min call with us below, and let's bring your digital
-        dreams to life together.
-      </p>
-<!-- Cal inline embed code begins -->
-<div style="width:100%;height:100%;overflow:scroll" id="my-cal-inline-30min"></div>
-<script type="text/javascript">
-  (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://cal.vincentpalomo.dev/embed/embed.js", "init");
-Cal("init", "30min", {origin:"https://cal.vincentpalomo.dev"});
-
-  Cal.ns["30min"]("inline", {
-    elementOrSelector:"#my-cal-inline-30min",
-    config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true","theme":"light"},
-    calLink: "lucidstudio/30min",
-  });
-
-  Cal.ns["30min"]("ui", {"theme":"light","hideEventTypeDetails":false,"layout":"month_view"});
-  </script>
-  <!-- Cal inline embed code ends -->
-      
-  </div>
-  <canvas id="shader-canvas"></canvas>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
-
-  <script>
-    // Get all nav items including the logo
-    const navItems = document.querySelectorAll('.nav-item');
-
-    // Add click handlers
-    navItems.forEach(item => {
-      item.addEventListener('click', (e) => {
-        const text = e.target.textContent.toLowerCase();
-        console.log('Clicked:', text);
-
-        // Get target element based on clicked text
-        const targetElement = document.querySelector(
-          text === 'lucid studio' || text === 'home' ? '.main-container' :
-            text === 'about' ? '.about-container' :
-              text === 'work' ? '.work-container' :
-                text === 'contact' ? '.footer-container' : null
-        );
-
-        if (targetElement) {
-          console.log('Scrolling to:', targetElement);
-          gsap.to(window, {
-            duration: 1,
-            scrollTo: {
-              y: targetElement,
-              offsetY: text === 'about' ? 0 : 0
-            },
-            ease: "power2.inOut",
-            onStart: () => console.log('Animation started'),
-            onComplete: () => console.log('Animation completed')
-          });
-        }
+    
+    <!-- Calendly Script -->
+    <script type="text/javascript">
+      (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://cal.vincentpalomo.dev/embed/embed.js", "init");
+      Cal("init", "30min", {origin:"https://cal.vincentpalomo.dev"});
+      Cal.ns["30min"]("inline", {
+        elementOrSelector:"#my-cal-inline-30min",
+        config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true","theme":"light"},
+        calLink: "lucidstudio/30min",
       });
-    });
-
-    // Add hamburger menu functionality
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
-    const bars = document.querySelectorAll('.bar');
-
-    hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-    });
-
-    // Close menu when clicking a link
-    document.querySelectorAll('.nav-item').forEach(link => {
-      link.addEventListener('click', () => {
-        if (navLinks.classList.contains('active')) {
-          navLinks.classList.remove('active');
-        }
-      });
-    });
-  </script>
-
-  <script src="shader.js" defer></script>
+      Cal.ns["30min"]("ui", {"theme":"light","hideEventTypeDetails":false,"layout":"month_view"});
+    </script>
 </body>
-
 </html>
